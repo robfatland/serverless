@@ -145,7 +145,7 @@ should bring up a *Create new project...* icon, a folder with a lightning bolt t
 Create the host folder and make the following choices to configure the project: 
 
 
-<img src="https://github.com/robfatland/serverless/blob/main/azure/images/23_1_VSCode_config_wizard.png" alt="drawing" width="200"/>
+<img src="https://github.com/robfatland/serverless/blob/main/azure/images/23_1_VSCode_config_wizard.png" alt="drawing" width="600"/>
 
 
 text
