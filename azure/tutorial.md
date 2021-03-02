@@ -109,6 +109,25 @@ text
 
 ## 6. Creating an Azure Function in FSCode
 
+<img src="https://github.com/robfatland/serverless/blob/main/azure/images/23_1_VSCode_config_wizard.png" alt="drawing" width="800"/>
+
+
+text
+
+
+<img src="https://github.com/robfatland/serverless/blob/main/azure/images/24_1_VSCode_Azure_Function_file_explorer.png" alt="drawing" width="800"/>
+
+
+text
+
+
+<img src="https://github.com/robfatland/serverless/blob/main/azure/images/24_2_VSCode_requirements_dot_txt.png" alt="drawing" width="800"/>
+
+
+text
+
+
+<img src="https://github.com/robfatland/serverless/blob/main/azure/images/25_1_VSCode_Python_virtual_environment_configuration.png" alt="drawing" width="800"/>
 
 
 
@@ -154,4 +173,42 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
     return func.HttpResponse(reply_string, status_code = 200)
 ```
 
+## 8. Test
 
+
+<img src="https://github.com/robfatland/serverless/blob/main/azure/images/27_1_VSCode_test_Azure_Function_localhost.png" alt="drawing" width="800"/>
+
+
+## 9. Deploy to Azure
+
+
+It remains to click the *Deploy to Azure* button and choose where the deployment goes. 
+
+
+<img src="https://github.com/robfatland/serverless/blob/main/azure/images/29_1_VSCode_deploy_button.png" alt="drawing" width="800"/>
+
+
+The results include a URL that we can paste into a browser address bar to test. 
+
+
+<img src="https://github.com/robfatland/serverless/blob/main/azure/images/30_1_VSCode_successful_deployment_to_Azure.png" alt="drawing" width="800"/>
+
+
+Here is a test with reasonable output. 
+
+
+<img src="https://github.com/robfatland/serverless/blob/main/azure/images/30_2_VSCode_browser_test_Azure_Function.png" alt="drawing" width="800"/>
+
+
+## 10. Programmatic test
+
+
+The last thing we want to do is to automate the Azure Function trigger. That is: Place the trigger action inside of a Client Python program.
+
+
+Need code (including install `requests`).
+
+Need successful cap
+
+
+This completes the automated workflow. Remarks on submerging all of this effort into something that "just works" and we can get on to other things. 
