@@ -101,7 +101,15 @@ text
 
 
 
-## 3. Code break
+## 3. Aside on templates
+
+## 4. Switching to Visual Studio Code (VSCode)
+
+## 5. Installing Azure extensions in VSCode
+
+## 6. Creating an Azure Function in FSCode
+
+## 7. Code break
 
 Here is the factoring code; save this in a file called `factor.py`:
 
