@@ -185,19 +185,19 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
 It remains to click the *Deploy to Azure* button and choose where the deployment goes. 
 
 
-<img src="https://github.com/robfatland/serverless/blob/main/azure/images/29_1_VSCode_deploy_button.png" alt="drawing" width="800"/>
+<img src="https://github.com/robfatland/serverless/blob/main/azure/images/29_1_VSCode_deploy_button.png" alt="drawing" width="400"/>
 
 
 The results include a URL that we can paste into a browser address bar to test. 
 
 
-<img src="https://github.com/robfatland/serverless/blob/main/azure/images/30_1_VSCode_successful_deployment_to_Azure.png" alt="drawing" width="300"/>
+<img src="https://github.com/robfatland/serverless/blob/main/azure/images/30_1_VSCode_successful_deployment_to_Azure.png" alt="drawing" width="400"/>
 
 
 Here is a test with reasonable output. 
 
 
-<img src="https://github.com/robfatland/serverless/blob/main/azure/images/30_2_VSCode_browser_test_Azure_Function.png" alt="drawing" width="300"/>
+<img src="https://github.com/robfatland/serverless/blob/main/azure/images/30_2_VSCode_browser_test_Azure_Function.png" alt="drawing" width="800"/>
 
 
 ## 10. Programmatic test
