@@ -37,28 +37,28 @@ sure to check **Code**, and choose **Python** and **3.8** as shown. The region i
 helps keep network access fast for you and otherwise makes little difference. 
 
 
-<img src="https://github.com/robfatland/serverless/blob/main/azure/images/10_4_Function_App_Wizard.png" alt="drawing" width="800"/>
+<img src="https://github.com/robfatland/serverless/blob/main/azure/images/10_4_Function_App_Wizard.png" alt="drawing" width="700"/>
 
 
 The **Hosting** tab should resemble the one shown below. Notice that a Storage Account is created by default and associated
 with the Function App. The last box at the bottom indicates we are building a serverless function.
 
 
-<img src="https://github.com/robfatland/serverless/blob/main/azure/images/12_1_Hosting_wizard.png" alt="drawing" width="800"/>
+<img src="https://github.com/robfatland/serverless/blob/main/azure/images/12_1_Hosting_wizard.png" alt="drawing" width="700"/>
 
 
 In the **Monitoring** tab you can choose to enable Application Insights. (This could also be done later.) This will associate tracking
 resources with the Azure Function. These are helpful tools for understanding behavior and debugging problems.
 
 
-<img src="https://github.com/robfatland/serverless/blob/main/azure/images/13_1_Monitoring_wizard.png" alt="drawing" width="800"/>
+<img src="https://github.com/robfatland/serverless/blob/main/azure/images/13_1_Monitoring_wizard.png" alt="drawing" width="700"/>
 
 
 The **Tagging** tab allows you to annotate this Azure Function with key-value pairs. This is extremely valuable -- when one
 takes the time to do it -- upon trying to remember what this Azure Function does after not thinking about it for four months. 
 
 
-<img src="https://github.com/robfatland/serverless/blob/main/azure/images/14_1_Tagging_wizard.png" alt="drawing" width="800"/>
+<img src="https://github.com/robfatland/serverless/blob/main/azure/images/14_1_Tagging_wizard.png" alt="drawing" width="700"/>
 
 
 The final **Review / Create** tab allows you to launch the creation process. 
@@ -67,13 +67,13 @@ The final **Review / Create** tab allows you to launch the creation process.
 <img src="https://github.com/robfatland/serverless/blob/main/azure/images/15_1_Review_Create_wizard.png" alt="drawing" width="500"/>
 
 
-If all goes well you arrive at a build confirmation panel.
+If all goes well you arrive at a confirmation message.
 
 
-<img src="https://github.com/robfatland/serverless/blob/main/azure/images/16_1_Deployment_complete.png" alt="drawing" width="500"/>
+<img src="https://github.com/robfatland/serverless/blob/main/azure/images/16_1_Deployment_complete.png" alt="drawing" width="600"/>
 
 
-text
+Now let's take stock of the Azure Function.
 
 
 <img src="https://github.com/robfatland/serverless/blob/main/azure/images/17_1_FunctionApp_resources.png" alt="drawing" width="600"/>
