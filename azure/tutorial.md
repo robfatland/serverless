@@ -129,7 +129,8 @@ To engage with the Azure cloud and Azure Functions using VSCode: Click the A-lik
 It looks like this: 
 
 
-<img src="https://github.com/robfatland/serverless/blob/main/azure/images/23_1_VSCode_config_wizard.png" alt="drawing" width="200"/>
+<img src="https://github.com/robfatland/serverless/blob/main/azure/images/22_1_VSCode_Azure_tent.png" alt="drawing" width="200"/>
+
 
 
 For the first part of the VSCode process we do not connect with Azure. Rather we build and test an Azure Function locally, on our
@@ -138,10 +139,22 @@ in the menu strip. This is also on the left side of the IDE, adjacent to the sym
 should bring up a *Create new project...* icon, a folder with a lightning bolt that looks like this:
 
 
-<img src="https://github.com/robfatland/serverless/blob/main/azure/images/24_1_VSCode_Azure_Function_file_explorer.png" alt="drawing" width="200"/>
+<img src="https://github.com/robfatland/serverless/blob/main/azure/images/22_1_VSCode_new_project_folder_icon.png" alt="drawing" width="200"/>
 
 
 Create the host folder and make the following choices to configure the project: 
+
+
+<img src="https://github.com/robfatland/serverless/blob/main/azure/images/23_1_VSCode_config_wizard.png" alt="drawing" width="200"/>
+
+
+text
+
+
+<img src="https://github.com/robfatland/serverless/blob/main/azure/images/24_1_VSCode_Azure_Function_file_explorer.png" alt="drawing" width="200"/>
+
+
+text
 
 
 <img src="https://github.com/robfatland/serverless/blob/main/azure/images/24_2_VSCode_requirements_dot_txt.png" alt="drawing" width="800"/>
