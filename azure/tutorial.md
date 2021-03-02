@@ -1,6 +1,6 @@
 # Azure Function tutorial
 
-<img src="https://github.com/robfatland/serverless/blob/master/azure/images/00_1_Azure_portal.png" alt="drawing" width="400"/>
+<img src="https://github.com/robfatland/serverless/blob/main/azure/images/00_1_Azure_portal.png" alt="drawing" width="400"/>
 
 ## Overview
 
