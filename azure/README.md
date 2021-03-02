@@ -2,7 +2,11 @@
 
 ## Overview
 
-What we would like is a containerized environment that acts like a no-cost no-risk development environment. 
+The goal here is to create a working Azure Function, an online service that factors an integer. To do this please 
+open the [`tutorial.md`](https://github.com/robfatland/serverless/azure/tutorial.md) file. To understand the 
+contextual basis for this exercise please continue reading this. 
+
+What we would like is a containerized environment that acts like a no-cost no-risk development sandbox. 
 Ideally I connect through a browser pane or something like that; so my native environment (PC, Mac, Linux) is immaterial.
 I will begin by focusing on the core chain of ideas (see below) and worry about containers later.
 
@@ -26,11 +30,13 @@ I will begin by focusing on the core chain of ideas (see below) and worry about 
 ## Core chain of ideas
 
 ### The cloud exists
+
 The cloud (someone else's computers) exists as a computing platform. I myself or someone has to pay for it; 
 and we need to make sure that work is not lost. Once expense and reliability are covered the great advantage 
 is that much (not all) of the "stuff I have to do before I can do actual work" is handled by someone else. 
 
 ### Services exist
+
 Continuing the thread of simplification: A *service* is some facet of computing that the cloud provides. There
 are three basic services to start with: Networking, compute power and storage. Each of these has an accompanying
 learning curve. For example *compute power* generally means finding and using a **Virtual Machine** or **VM**; with an
@@ -48,6 +54,7 @@ fast; so this is another aspect of cloud design philosophy: Bring the heavy comp
 the communication rate from my local computer to the cloud very modest. 
 
 ### Build how?
+
 We have identified a working environment, the cloud, and we suppose there is something we would like to build
 thereon. How to do this? Not surprisingly there are multiple paths. First we can log in to the cloud control
 console. For Azure this is called the *Azure Portal*. The problem is that there are many details that the portal
