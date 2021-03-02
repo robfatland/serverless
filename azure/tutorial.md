@@ -73,16 +73,16 @@ If all goes well you arrive at a confirmation message.
 <img src="https://github.com/robfatland/serverless/blob/main/azure/images/16_1_Deployment_complete.png" alt="drawing" width="600"/>
 
 
-Now let's take stock of the Azure Function.
+Now let's take stock of the Azure Function. This is a long (scrollable) list of its attributes or facets.
 
 
-<img src="https://github.com/robfatland/serverless/blob/main/azure/images/17_1_FunctionApp_resources.png" alt="drawing" width="600"/>
+<img src="https://github.com/robfatland/serverless/blob/main/azure/images/17_1_FunctionApp_resources.png" alt="drawing" width="500"/>
 
 
-text
+Pretty far down on that list is a section on Monitoring that looks like this:
 
 
-<img src="https://github.com/robfatland/serverless/blob/main/azure/images/18_1_FunctionApp_Monitoring.png" alt="drawing" width="500"/>
+<img src="https://github.com/robfatland/serverless/blob/main/azure/images/18_1_FunctionApp_Monitoring.png" alt="drawing" width="400"/>
 
 
 text
