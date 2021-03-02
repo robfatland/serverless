@@ -8,61 +8,69 @@ This file walks you through building a simple *serverless service* on the Azure 
 
 ## 2. Portal work
 
+On logging in you have a browser view of the Azure portal; upper left corner looking something like this: 
+
+
 <img src="https://github.com/robfatland/serverless/blob/main/azure/images/00_1_Azure_portal.png" alt="drawing" width="400"/>
 
 
-text
+'Resource' is the generic term for some item you'd like to allocate and use. 
 
 
 <img src="https://github.com/robfatland/serverless/blob/main/azure/images/10_1_Create_a_resource.png" alt="drawing" width="200"/>
 
 
-text
+Type 'function' in the search window to help select the resource you want: An Azure Function App. 
 
 
 <img src="https://github.com/robfatland/serverless/blob/main/azure/images/10_2_Choose_Azure_Function_App.png" alt="drawing" width="200"/>
 
 
-text
+Click on the **Create** button; so we can next proceed to a series of screen captures of the wizard-guided process.
 
 
 <img src="https://github.com/robfatland/serverless/blob/main/azure/images/10_3_Create_Function_App.png" alt="drawing" width="200"/>
 
 
-text
+The **Basics** tab of the wizard defines some details -- including the name -- of the Azure Function. Defaults are fine but be
+sure to check **Code**, and choose **Python** and **3.8** as shown. The region is ideally geographically close to you; this 
+helps keep network access fast for you and otherwise makes little difference. 
 
 
 <img src="https://github.com/robfatland/serverless/blob/main/azure/images/10_4_Function_App_Wizard.png" alt="drawing" width="800"/>
 
 
-text
+The **Hosting** tab should resemble the one shown below. Notice that a Storage Account is created by default and associated
+with the Function App. The last box at the bottom indicates we are building a serverless function.
 
 
 <img src="https://github.com/robfatland/serverless/blob/main/azure/images/12_1_Hosting_wizard.png" alt="drawing" width="800"/>
 
 
-text
+In the **Monitoring** tab you can choose to enable Application Insights. (This could also be done later.) This will associate tracking
+resources with the Azure Function. These are helpful tools for understanding behavior and debugging problems.
 
 
 <img src="https://github.com/robfatland/serverless/blob/main/azure/images/13_1_Monitoring_wizard.png" alt="drawing" width="800"/>
 
 
-text
+The **Tagging** tab allows you to annotate this Azure Function with key-value pairs. This is extremely valuable -- when one
+takes the time to do it -- upon trying to remember what this Azure Function does after not thinking about it for four months. 
 
 
 <img src="https://github.com/robfatland/serverless/blob/main/azure/images/14_1_Tagging_wizard.png" alt="drawing" width="800"/>
 
 
-text
+The final **Review / Create** tab allows you to launch the creation process. 
 
 
 <img src="https://github.com/robfatland/serverless/blob/main/azure/images/15_1_Review_Create_wizard.png" alt="drawing" width="500"/>
 
 
-text
+If all goes well you arrive at a build confirmation panel.
 
 
-<img src="https://github.com/robfatland/serverless/blob/main/azure/images/16_1_Deployment_complete.png" alt="drawing" width="800"/>
+<img src="https://github.com/robfatland/serverless/blob/main/azure/images/16_1_Deployment_complete.png" alt="drawing" width="500"/>
 
 
 text
