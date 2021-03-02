@@ -79,46 +79,69 @@ Now let's take stock of the Azure Function. This is a long (scrollable) list of 
 <img src="https://github.com/robfatland/serverless/blob/main/azure/images/17_1_FunctionApp_resources.png" alt="drawing" width="500"/>
 
 
-Pretty far down on that list is a section on Monitoring that looks like this:
+Far down on that list is a section on Monitoring. Again this is where one would begin for careful debugging.
 
 
 <img src="https://github.com/robfatland/serverless/blob/main/azure/images/18_1_FunctionApp_Monitoring.png" alt="drawing" width="400"/>
 
 
-text
+Again here is the resource group associated with this Azure Function.
 
 
 <img src="https://github.com/robfatland/serverless/blob/main/azure/images/19_1_Resource_Group_on_portal.png" alt="drawing" width="400"/>
 
 
-text
+Here are the three resources in that resource group: The Azure Function, its associated Application Insights resource for monitoring, 
+and a dedicated storage account.
 
 
 <img src="https://github.com/robfatland/serverless/blob/main/azure/images/19_2_FunctionApp_three_components.png" alt="drawing" width="800"/>
 
 
-text
+This concludes the creation of the Azure Function using the portal. The idea was to illustrate the basic nature of the 
+interaction.
 
 
 
 ## 3. Aside on templates
 
+
+In the portal: **Generate template** produces JSON that can be "run" to recreate what was done manually. 
+
+
 ## 4. Switching to Visual Studio Code (VSCode)
+
+
+We now install VSCode on a local computer or log in to a container environment where it has already been installed. 
+
 
 ## 5. Installing Azure extensions in VSCode
 
+
+In what follows we need the VSCode *Azure Core Tools* extension and the *Azure Functions Core Tools* extension.  
+
+
+
 ## 6. Creating an Azure Function in FSCode
 
-<img src="https://github.com/robfatland/serverless/blob/main/azure/images/23_1_VSCode_config_wizard.png" alt="drawing" width="400"/>
+
+To engage with the Azure cloud and Azure Functions using VSCode: Click the A-like or tent-like Azure icon in the left sidebar. 
+It looks like this: 
 
 
-text
+<img src="https://github.com/robfatland/serverless/blob/main/azure/images/23_1_VSCode_config_wizard.png" alt="drawing" width="200"/>
+
+
+For the first part of the VSCode process we do not connect with Azure. Rather we build and test an Azure Function locally, on our
+own computer. To start this process: First select the Azure context as described above, then hover your cursor over **FUNCTIONS**
+in the menu strip. This is also on the left side of the IDE, adjacent to the symbol strip at the far left. This hover action 
+should bring up a *Create new project...* icon, a folder with a lightning bolt that looks like this:
 
 
 <img src="https://github.com/robfatland/serverless/blob/main/azure/images/24_1_VSCode_Azure_Function_file_explorer.png" alt="drawing" width="200"/>
 
 
-text
+Create the host folder and make the following choices to configure the project: 
 
 
 <img src="https://github.com/robfatland/serverless/blob/main/azure/images/24_2_VSCode_requirements_dot_txt.png" alt="drawing" width="800"/>
