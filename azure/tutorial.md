@@ -1,5 +1,7 @@
 # Azure Function tutorial
 
+<img src="https://github.com/robfatland/serverless/blob/master/azure/images/portal.png" alt="drawing" width="400"/>
+
 ## Overview
 
 This file walks you through building a simple *serverless service* on the Azure cloud. This is called an *Azure Function*. 
