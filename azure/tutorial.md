@@ -1,4 +1,4 @@
-# Azure Function tutorial
+# Azure Function walkthrough
 
 ## Overview
 
@@ -109,6 +109,9 @@ text
 
 ## 6. Creating an Azure Function in FSCode
 
+
+
+
 ## 7. Code break
 
 Here is the factoring code; save this in a file called `factor.py`:
@@ -150,3 +153,5 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
 
     return func.HttpResponse(reply_string, status_code = 200)
 ```
+
+
