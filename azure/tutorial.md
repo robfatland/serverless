@@ -271,9 +271,22 @@ Here is an example test result:
 The last thing we want to do is to automate the Azure Function trigger. That is: Place the trigger action inside of a Client Python program.
 
 
-Need code (including install `requests`).
+Ensure that the Python `requests` library is installed in your environment. Run this simple program intended to get
+the factorization of 144:
 
-Need successful cap
+
+```
+import requests
+urlbase='https://azfn1.azurewebsites.net/api/azfn1'
+print(requests.get(urlbase + '?n=144').text)
+```
+
+This completes the construction and testing of a simple serverless computation service. The first million
+executions of this function on Azure are at no cost. The service will be stable and should "just work" for 
+the foreseeable future which on the cloud is typically about three to five years.
 
 
-This completes the automated workflow. Remarks on submerging all of this effort into something that "just works" and we can get on to other things. 
+Real implementations will tend to be more complex. They will particularly tend to involve connecting 
+the serverless function with data resources. While this is 
+beyond the scope of this tutorial, a vast array of instructional resources are 
+available online. 
