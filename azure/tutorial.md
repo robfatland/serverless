@@ -148,7 +148,10 @@ Create the host folder and make the following choices to configure the project:
 <img src="https://github.com/robfatland/serverless/blob/main/azure/images/23_1_VSCode_config_wizard.png" alt="drawing" width="600"/>
 
 
-text
+This will configure an environment to match these choices and create the project; takes a couple minutes.
+
+
+Activate the explorer by clicking the double page icon at the upper left. You should see an item corresponding to your new project. Expand this view.
 
 
 <img src="https://github.com/robfatland/serverless/blob/main/azure/images/24_1_VSCode_Azure_Function_file_explorer.png" alt="drawing" width="200"/>
