@@ -4,10 +4,12 @@
 ## Overview
 
 
-This file walks you through building a simple serverless utility on the Azure cloud called an *Azure Function*. 
+We walk through building a simple serverless utility on the Azure cloud called an *Azure Function*. 
+Since we publish code with no contact with a virtual machine en route this kind of service is
+called 'serverless'. There is a server but we just don't worry about it at all.
 
 
-**A note on using the Azure portal**: This is covered in part 2 of this walk-through. If for any reason you
+**A note on using the Azure portal**: Portal procedure is covered in part 2 of this walk-through. If for any reason you
 are not interested in working with and learning about the Azure portal you can do part *1*, 
 skip sections *2* and *3* and continue with section *4*. 
 
