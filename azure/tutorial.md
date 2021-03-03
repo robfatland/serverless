@@ -11,7 +11,13 @@ called 'serverless'. There is a server but we just don't worry about it at all.
 
 **A note on using the Azure portal**: Portal procedure is covered in part 2 of this walk-through. If for any reason you
 are not interested in working with and learning about the Azure portal you can do part *1*, 
-skip sections *2* and *3* and continue with section *4*. 
+skip sections *2* and *3* and continue with section *4*.
+
+
+**A note on 'Development System'**: Your Development System is a computer + OS where you develop code for deployment to Azure Functions.
+It may be your laptop; it may be a Docker container; it may be a cloud VM; it may be a large pile of coconuts. Whatever it is you
+will need this Development System to follow along on this walkthrough. In parts 4 and 5 we describe what you
+will need to install there; so before getting started you may wish to go through that to be prepared. 
 
 
 
@@ -138,17 +144,28 @@ In the portal: **Generate template** produces JSON that can be "run" to recreate
 ## 4. Switching to Visual Studio Code (VSCode)
 
 
-Install VSCode on your local computer or connect to a desktop environment where VSCode is installed. 
+Install VSCode on your Development System. It is available for free for all common operating systems. 
 
 
-## 5. Installing Azure extensions in VSCode
+Note: If you are working
+in a pre-built environment such as a Docker container: It may already be installed. 
 
 
-We need the *Azure Functions Core Tools* extension. Possibly the *Azure Core Tools* extension as well.
+## 5. Installing extensions, Python, and so forth
 
 
-For working from a PC: Ensure that your sole Python executable is version 3.8 or later and 64 bit. 
-This avoids a miasma of inexplicable *nope does not work* messages. 
+* Make sure you have Python 3.8+ 64-bit installed on your development system. 
+    * This avoids a miasma of inexplicable *does not work* outcomes.
+    * Ensure also that your Path is set to run this version of Python
+* You may wish to update `pip` using the command `python -m pip install --upgrade pip`
+* Install Azure extensions in VSCode *from* VSCode: *Azure Functions Core Tools*. 
+    * [This webpage](https://github.com/Azure/azure-functions-core-tools#installing) may help
+    * *Azure Core Tools* can't hurt.
+
+
+
+Note: If you are working
+in a pre-built environment such as a Docker container: These things may already be installed. 
 
 
 
@@ -157,6 +174,11 @@ This avoids a miasma of inexplicable *nope does not work* messages.
 
 With VSCode running use ctrl + j to bring up a tabbed console in the lower part of the IDE. This acts as a kind of control
 center while the pane above it acts as a file editor. 
+
+
+Type ctrl + shift + p to bring up the Command prompt. Type `Azure Sign In`, select, and authenticate. You should now be
+authenticated into your Azure account from your local (Development System) instance of VSCode.
+ 
 
 
 To engage with the Azure cloud and Azure Functions using VSCode: Click the A-like or tent-like Azure icon in the left sidebar. 
@@ -197,7 +219,10 @@ The `requirements.txt` file describes packages that are installed in a Python vi
 <img src="https://github.com/robfatland/serverless/blob/main/azure/images/24_2_VSCode_requirements_dot_txt.png" alt="drawing" width="800"/>
 
 
-Related: The file `pyvenv.cfg` describes the local Python executable path and version.
+Related: The file `pyvenv.cfg` describes the local Python executable path and version. Above in part 5 we
+mentioned to ensure you have Python 3.8+ 64-bit installed. This is a good opportunity to double check: 
+The Python executable referenced in the `home` variable assignment in the `pyvenv.cfg` file should in fact 
+be this version of Python. Also be certain that your PATH environment variable is set properly to refer to this.
 
 
 <img src="https://github.com/robfatland/serverless/blob/main/azure/images/25_1_VSCode_Python_virtual_environment_configuration.png" alt="drawing" width="800"/>
