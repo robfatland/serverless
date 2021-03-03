@@ -27,7 +27,7 @@ minimize any cost impact and/or risk it is a good idea to delete everything when
 ## 2. Portal work
 
 
-On logging in to the [Azure portal](https://portal.azure.com) you have a browser view of the Azure portal; upper left corner looking something like this: 
+On logging in to the [Azure portal](https://portal.azure.com) you see the home page, the upper left corner looking something like this: 
 
 
 <img src="https://github.com/robfatland/serverless/blob/main/azure/images/00_1_Azure_portal.png" alt="drawing" width="400"/>
