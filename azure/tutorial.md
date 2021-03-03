@@ -173,18 +173,29 @@ in a pre-built environment such as a Docker container: These things may already 
 
 ## 6. Creating an Azure Function in FSCode
 
+VSCode starts with a Welcome page that you can dismiss. Doing so reveals some Ctrl-key shortcuts. 
+
+
+The VSCode console layout includes an **Activity Bar** at the extreme left (a vertical sequence of icons) and a **Sidebar**
+adjacent to this. Your **Activity Bar** selection will determine the dropdowns and options that appear in the **Sidebar**.
+At the bottom of the VSCode console is a status bar. This will include your sign-in status. If you see 
+*Azure:yourusername@yourdomain* you are signed in. 
+
 
 With VSCode running use ctrl + j to bring up a tabbed console in the lower part of the IDE. This acts as a kind of control
-center while the pane above it acts as a file editor. 
+center while the panel above it is a tabbed file editor. 
 
 
+If you are not currently signed in to Azure: 
 Type ctrl + shift + p to bring up the Command prompt. Type `Azure Sign In`, select, and authenticate. You should now be
-authenticated into your Azure account from your local (Development System) instance of VSCode.
+authenticated into your Azure account from your local (Development System) instance of VSCode. Verify this by
+looking at the status bar at bottom of the console. 
  
 
 
-To engage with the Azure cloud and Azure Functions using VSCode: Click the A-like or tent-like Azure icon in the left sidebar. 
+To engage with the Azure cloud and Azure Functions using VSCode: Click the A-like or tent-like Azure icon in the activity bar.
 It looks like this: 
+
 
 
 <img src="https://github.com/robfatland/serverless/blob/main/azure/images/22_1_VSCode_Azure_tent_icon.png" alt="drawing" width="80"/>
