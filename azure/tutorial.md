@@ -212,10 +212,24 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
     return func.HttpResponse(reply_string, status_code = 200)
 ```
 
+In summary: We do not make any configuration changes to the default Azure Function. We did add an additional Python code file
+and we imported its sole function into the main program. The main program was also modified to look for a parameter `n` 
+passed in the HTTP trigger request. 
+
+
 ## 8. Test locally
+
+Make sure the lower-central tabbed console is open (ctrl + j). Select the TERMINAL tab.
+Use the **Run** menu or **F5** to debug the program. This will provide a test URL on `localhost`. 
+Ctrl+click on this link. 
 
 
 <img src="https://github.com/robfatland/serverless/blob/main/azure/images/27_1_VSCode_test_Azure_Function_localhost.png" alt="drawing" width="800"/>
+
+
+This should open a browser tab where the "thanks for playing" message is printed. 
+As an integer was not provided, nothing was factored. To test the factor function append `?n=15` to the 
+URL in the browser address bar. 
 
 
 ## 9. Deploy to Azure
