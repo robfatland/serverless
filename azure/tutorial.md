@@ -157,13 +157,13 @@ Activate the explorer by clicking the double page icon at the upper left. You sh
 <img src="https://github.com/robfatland/serverless/blob/main/azure/images/24_1_VSCode_Azure_Function_file_explorer.png" alt="drawing" width="200"/>
 
 
-text
+The `requirements.txt` file describes packages that are installed in a Python virtual environment for the Azure Function to run.
 
 
 <img src="https://github.com/robfatland/serverless/blob/main/azure/images/24_2_VSCode_requirements_dot_txt.png" alt="drawing" width="800"/>
 
 
-text
+Related: The file `pyvenv.cfg` describes the local Python executable path and version.
 
 
 <img src="https://github.com/robfatland/serverless/blob/main/azure/images/25_1_VSCode_Python_virtual_environment_configuration.png" alt="drawing" width="800"/>
@@ -172,7 +172,7 @@ text
 
 ## 7. Code break
 
-Here is the factoring code; save this in a file called `factor.py`:
+In the same location as `__init__.py` add a code file called `factoring_code.py` with these contents: 
 
 
 ```
@@ -191,7 +191,7 @@ def factor_integer(n):
     return prime_factors
 ```
 
-Here is the main program code which goes into the file `__init__.py`. Notice the import statement for the above code has an unusual syntax.
+Modify the file `__init__.py` to look as follows. (Notice the leading period `.` in the import statement for the factoring code.)
 
 ```
 import logging
@@ -212,7 +212,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
     return func.HttpResponse(reply_string, status_code = 200)
 ```
 
-## 8. Test
+## 8. Test locally
 
 
 <img src="https://github.com/robfatland/serverless/blob/main/azure/images/27_1_VSCode_test_Azure_Function_localhost.png" alt="drawing" width="800"/>
