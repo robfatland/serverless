@@ -118,7 +118,11 @@ We now install VSCode on a local computer or log in to a container environment w
 ## 5. Installing Azure extensions in VSCode
 
 
-In what follows we need the VSCode *Azure Core Tools* extension and the *Azure Functions Core Tools* extension.  
+We need the *Azure Functions Core Tools* extension. Possibly the *Azure Core Tools* extension as well.
+
+
+For working from a PC: Ensure that your sole Python executable is version 3.8 or later and 64 bit. 
+This avoids a miasma of inexplicable *nope does not work* messages. 
 
 
 
