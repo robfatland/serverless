@@ -1,20 +1,44 @@
 # Azure Function walkthrough
 
+
 ## Overview
 
-This file walks you through building a simple *serverless service* on the Azure cloud. This is called an *Azure Function*. 
 
-## 1. Establish access to a Subscription including your authentication credentials
+This file walks you through building a simple serverless utility on the Azure cloud called an *Azure Function*. 
+
+
+**A note on using the Azure portal**: This is covered in part 2 of this walk-through. If for any reason you
+are not interested in working with and learning about the Azure portal you can do part *1*, 
+skip sections *2* and *3* and continue with section *4*. 
+
+
+
+## 1. Establish access to an Azure Subscription 
+
+
+Make sure you have access to your authentication credentials; and take care that they do not end up in 
+a public location such as GitHub. 
+
+
+The construction we do in this tutorial will cost very little (as in pennies) but to
+minimize any cost impact and/or risk it is a good idea to delete everything when you are done. 
+
 
 ## 2. Portal work
 
-On logging in you have a browser view of the Azure portal; upper left corner looking something like this: 
+
+On logging in to the [Azure portal](https://portal.azure.com) you have a browser view of the Azure portal; upper left corner looking something like this: 
 
 
 <img src="https://github.com/robfatland/serverless/blob/main/azure/images/00_1_Azure_portal.png" alt="drawing" width="400"/>
 
 
-'Resource' is the generic term for some item you'd like to allocate and use. 
+Using the portal is something like a "what you see is what you get" interface experience. All of the complexity
+of using the cloud is there; so the idea of starting out here is to do a bit of context learning through immersion. 
+As noted above this can be skipped entirely in favor of moving ahead to step 4 of this walkthrough.
+
+
+A 'Resource' is the generic term for an item you'd like to allocate and use. 
 
 
 <img src="https://github.com/robfatland/serverless/blob/main/azure/images/10_1_Create_a_resource.png" alt="drawing" width="200"/>
@@ -112,7 +136,7 @@ In the portal: **Generate template** produces JSON that can be "run" to recreate
 ## 4. Switching to Visual Studio Code (VSCode)
 
 
-We now install VSCode on a local computer or log in to a container environment where it has already been installed. 
+Install VSCode on your local computer or connect to a desktop environment where VSCode is installed. 
 
 
 ## 5. Installing Azure extensions in VSCode
