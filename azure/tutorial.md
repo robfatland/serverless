@@ -158,6 +158,8 @@ in a pre-built environment such as a Docker container: It may already be install
     * This avoids a miasma of inexplicable *does not work* outcomes.
     * Ensure also that your Path is set to run this version of Python
 * You may wish to update `pip` using the command `python -m pip install --upgrade pip`
+* Ensure that the `requests` package is installed
+    * From the Command console: `python -m pip install requests`
 * Install Azure extensions in VSCode *from* VSCode: *Azure Functions Core Tools*. 
     * [This webpage](https://github.com/Azure/azure-functions-core-tools#installing) may help
     * *Azure Core Tools* can't hurt.
