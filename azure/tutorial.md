@@ -125,6 +125,10 @@ In what follows we need the VSCode *Azure Core Tools* extension and the *Azure F
 ## 6. Creating an Azure Function in FSCode
 
 
+With VSCode running use ctrl + j to bring up a tabbed console in the lower part of the IDE. This acts as a kind of control
+center while the pane above it acts as a file editor. 
+
+
 To engage with the Azure cloud and Azure Functions using VSCode: Click the A-like or tent-like Azure icon in the left sidebar. 
 It looks like this: 
 
@@ -191,7 +195,7 @@ def factor_integer(n):
     return prime_factors
 ```
 
-Modify the file `__init__.py` to look as follows. (Notice the leading period `.` in the import statement for the factoring code.)
+Modify the file `__init__.py` to read as follows. (Notice the leading period `.` in the import statement for the factoring code.)
 
 ```
 import logging
@@ -219,35 +223,43 @@ passed in the HTTP trigger request.
 
 ## 8. Test locally
 
+
 Make sure the lower-central tabbed console is open (ctrl + j). Select the TERMINAL tab.
-Use the **Run** menu or **F5** to debug the program. This will provide a test URL on `localhost`. 
-Ctrl+click on this link. 
+Use the **Run** menu or **F5** to debug the program. This will provide a test URL on `localhost`
+as shown in the larger red rectangle below. Ctrl+click on this link. 
 
 
 <img src="https://github.com/robfatland/serverless/blob/main/azure/images/27_1_VSCode_test_Azure_Function_localhost.png" alt="drawing" width="800"/>
 
 
-This should open a browser tab where the "thanks for playing" message is printed. 
+This should open a browser tab where the "thanks for playing" message will be printed. 
 As an integer was not provided, nothing was factored. To test the factor function append `?n=15` to the 
 URL in the browser address bar. 
+
+
+While this Function is running locally the **Run + small bug** icon in the left-side context bar will display a blue badge.
+Stop the Function to dismiss.
 
 
 ## 9. Deploy to Azure
 
 
-It remains to click the *Deploy to Azure* button and choose where the deployment goes. 
+It remains to click the *Deploy to Azure* button and choose where the deployment goes. From the left sidebar select the Azure
+icon. As before: Hover on **FUNCTIONS** to see the deploy up-arrow icon. It is circled in white here:
 
 
 <img src="https://github.com/robfatland/serverless/blob/main/azure/images/29_1_VSCode_deploy_button.png" alt="drawing" width="400"/>
 
 
-The results include a URL that we can paste into a browser address bar to test. 
+Note that while this Azure Function is deploying to the Azure cloud, the lower console directs your attention to the **OUTPUT** tab.  
+Here, once the deployment is completed, the new Function is provided as a URL on *azurewebsites.net*. Ctrl + click and test as before
+with the local version. 
 
 
 <img src="https://github.com/robfatland/serverless/blob/main/azure/images/30_1_VSCode_successful_deployment_to_Azure.png" alt="drawing" width="400"/>
 
 
-Here is a test with reasonable output. 
+Here is an example test result:
 
 
 <img src="https://github.com/robfatland/serverless/blob/main/azure/images/30_2_VSCode_browser_test_Azure_Function.png" alt="drawing" width="800"/>
