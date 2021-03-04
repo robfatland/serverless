@@ -1,4 +1,4 @@
-# Azure Function walkthrough
+# Azure Functions for scientists and students: A walkthrough
 
 ## Construction notes
 
