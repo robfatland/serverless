@@ -46,7 +46,8 @@ Need to factor in; [Appendices](#appendices) maybe?
 * Give Output examples: an HTTP response, a new file stored in some particular spot (SA)
 * Think about / cover the import of private environment variables; and related: Rationale: How do we get our AF code on GitHub safely? There is already a lot of machinery in place in VSCode. 
 * More #foo and more chopping sections into sub-blocks
-
+* [Microsoft documentation part 1](https://docs.microsoft.com/en-us/azure/azure-functions/functions-reference)
+* [Microsoft documentation part 2](https://docs.microsoft.com/en-us/azure/azure-functions/functions-reference-python)
 
 
 
