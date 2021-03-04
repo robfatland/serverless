@@ -72,7 +72,7 @@ will need to install there; so before getting started you may wish to go through
 
 
 
-## 1. Establish access to an Azure Subscription 
+## 1 Establish access to an Azure Subscription 
 
 
 Make sure you have access to your authentication credentials; and take care that they do not end up in 
@@ -83,7 +83,7 @@ The construction we do in this tutorial will cost very little (as in pennies) bu
 minimize any cost impact and/or risk it is a good idea to delete everything when you are done. 
 
 
-## 2. Portal work
+## 2 Portal work
 
 
 On logging in to the [Azure portal](https://portal.azure.com) you see the home page, the upper left corner looking something like this: 
@@ -186,7 +186,7 @@ interaction.
 
 
 
-## 3. Aside on templates
+## 3 Aside on templates
 
 
 In the portal: **Generate template** produces JSON that can be "run" to recreate what was done manually. 
@@ -203,7 +203,7 @@ Note: If you are working
 in a pre-built environment such as a Docker container: It may already be installed. 
 
 
-## 5. Installing extensions, Python, and so forth
+## 5 Installing extensions, Python, and so forth
 
 
 * Make sure you have Python 3.8+ 64-bit installed on your development system. 
@@ -223,7 +223,7 @@ in a pre-built environment such as a Docker container: These things may already 
 
 
 
-## 6. Creating an Azure Function in VSCode
+## 6 Creating an Azure Function in VSCode
 
 ### Prefatory on VSCode
 
@@ -299,7 +299,7 @@ be this version of Python. Also be certain that your PATH environment variable i
 
 
 
-## 7. Code break
+## 7 Code break
 
 In the same location as `__init__.py` add a code file called `factoring_code.py` with these contents: 
 
@@ -346,7 +346,7 @@ and we imported its sole function into the main program. The main program was al
 passed in the HTTP trigger request. 
 
 
-## 8. Test locally
+## 8 Test locally
 
 
 Make sure the lower-central tabbed console is open (ctrl + j). Select the TERMINAL tab.
@@ -367,7 +367,7 @@ This indicates the Azure Function process is running locally.
 Stop the Function, clear the badge.
 
 
-## 9. Deploy to Azure
+## 9 Deploy to Azure
 
 
 It remains to click the *Deploy to Azure* button and choose where the deployment goes. From the 
@@ -396,7 +396,7 @@ Here is an example test result:
 If this works as planned we have completed coding, testing, deploying and executing the Azure Function on the Azure cloud. 
 
 
-## 10. Programmatic test
+## 10 Programmatic test
 
 
 The last thing we want to do is to automate the Azure Function trigger. That is: Place the trigger action inside of a Client Python program.
