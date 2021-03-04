@@ -171,9 +171,12 @@ in a pre-built environment such as a Docker container: These things may already 
 
 
 
-## 6. Creating an Azure Function in FSCode
+## 6. Creating an Azure Function in VSCode
 
-VSCode starts with a Welcome page that you can dismiss. Doing so reveals some Ctrl-key shortcuts. 
+### Prefatory on VSCode
+
+
+VSCode starts with a tabbed Welcome page that you can dismiss. Doing so reveals some Ctrl-key shortcuts. 
 
 
 The VSCode console layout includes an **Activity Bar** at the extreme left (a vertical sequence of icons) and a **Sidebar**
@@ -220,7 +223,7 @@ Create the host folder and make the following choices to configure the project:
 This will configure an environment to match these choices and create the project; takes a couple minutes.
 
 
-Activate the explorer by clicking the double page icon at the upper left. You should see an item corresponding to your new project. Expand this view.
+Activate the explorer by clicking the double page icon at the top of the activity bar. You should see an item corresponding to your new project. Expand this view.
 
 
 <img src="https://github.com/robfatland/serverless/blob/main/azure/images/24_1_VSCode_Azure_Function_file_explorer.png" alt="drawing" width="200"/>
@@ -235,7 +238,7 @@ The `requirements.txt` file describes packages that are installed in a Python vi
 Related: The file `pyvenv.cfg` describes the local Python executable path and version. Above in part 5 we
 mentioned to ensure you have Python 3.8+ 64-bit installed. This is a good opportunity to double check: 
 The Python executable referenced in the `home` variable assignment in the `pyvenv.cfg` file should in fact 
-be this version of Python. Also be certain that your PATH environment variable is set properly to refer to this.
+be this version of Python. Also be certain that your PATH environment variable is set properly to refer to this executable.
 
 
 <img src="https://github.com/robfatland/serverless/blob/main/azure/images/25_1_VSCode_Python_virtual_environment_configuration.png" alt="drawing" width="800"/>
@@ -305,15 +308,18 @@ As an integer was not provided, nothing was factored. To test the factor functio
 URL in the browser address bar. 
 
 
-While this Function is running locally the **Run + small bug** icon in the left-side context bar will display a blue badge.
-Stop the Function to dismiss.
+Notice the **Run / bug** icon in the activity bar displays a blue badge.
+This indicates the Azure Function process is running locally.
+Stop the Function, clear the badge.
 
 
 ## 9. Deploy to Azure
 
 
-It remains to click the *Deploy to Azure* button and choose where the deployment goes. From the left sidebar select the Azure
-icon. As before: Hover on **FUNCTIONS** to see the deploy up-arrow icon. It is circled in white here:
+It remains to click the *Deploy to Azure* button and choose where the deployment goes. From the 
+[activity bar](#prefatory-on-vscode) 
+select the Azure
+icon. As before: Hover on **FUNCTIONS** in the sidebar to illuminate the deployment / up-arrow icon. It is circled in white here:
 
 
 <img src="https://github.com/robfatland/serverless/blob/main/azure/images/29_1_VSCode_deploy_button.png" alt="drawing" width="400"/>
@@ -331,6 +337,9 @@ Here is an example test result:
 
 
 <img src="https://github.com/robfatland/serverless/blob/main/azure/images/30_2_VSCode_browser_test_Azure_Function.png" alt="drawing" width="800"/>
+
+
+If this works as planned we have completed coding, testing, deploying and executing the Azure Function on the Azure cloud. 
 
 
 ## 10. Programmatic test
