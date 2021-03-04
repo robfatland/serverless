@@ -204,8 +204,10 @@ It looks like this:
 <img src="https://github.com/robfatland/serverless/blob/main/azure/images/22_1_VSCode_Azure_tent_icon.png" alt="drawing" width="80"/>
 
 
+### Preparing to code the Azure Function
 
-For the first part of the VSCode process we do not connect with Azure. Rather we build and test an Azure Function locally, on our
+
+For the first part of the Azure Function coding process we do not connect with Azure. Rather we build and test an Azure Function locally, on our
 own computer. To start this process: First select the Azure context as described above, then hover your cursor over **FUNCTIONS**
 in the menu strip. This is also on the left side of the IDE, adjacent to the symbol strip at the far left. This hover action 
 should bring up a *Create new project...* icon, a folder with a lightning bolt that looks like this:
