@@ -62,7 +62,7 @@ called 'serverless'. There is a server but we just don't worry about it at all.
 **A note on using the Azure portal**: Portal procedure is covered in part 2 of this walk-through. If for any reason you
 are not interested in working with and learning about the Azure portal you can do part *1*, 
 skip sections *2* and *3* and continue with 
-[*section 4*](#4.-switching-to-visual-studio-code).
+[*section 4*](#4-switching-to-visual-studio-code).
 
 
 **A note on 'Development System'**: Your Development System is a computer + OS where you develop code for deployment to Azure Functions.
@@ -192,7 +192,7 @@ interaction.
 In the portal: **Generate template** produces JSON that can be "run" to recreate what was done manually. 
 
 
-## 4. Switching to Visual Studio Code
+## 4 Switching to Visual Studio Code
 
 
 Install the Visual Studio Code (VSCode) application on your Development System. 
