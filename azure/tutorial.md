@@ -424,4 +424,39 @@ available online.
 
 ## Appendices
 
+### Docker for Philistines
+
+- [Windows installation](https://docs.docker.com/docker-for-windows/install/)
+- Download the installer, run through the installation, start the Docker app (this takes some time)
+- Run through the tutoria ("2 minutes")
+    - Notice this tutorial places an active Windows Powershell in the right side of the application panel
+    - Running the first two commands `docker run` and `docker cp` in this shell sets in motion:
+        - git clone of the github docker-org `getting-started` repo (from `alpine/git:latest`)
+        - this is into `~/getting-started`
+    - Next is `docker build` from the clone directory: Builds the 101 tutorial. This takes a minute.
+    - Next `docker run` runs this newly built docker container, mapping port 80 of the container to port 80 of the OS. 
+    - Next `docker tag` and `docker push`; so now this image is registered under my docker user account
+
+Let's back up from the "docker image at Docker Hub" part: I use `localhost/tutorial` to see the tutorial web app. 
+That is, a running docker container is serving HTML to my browser when I hit that localhost URL. Great; there 
+ought to follow some more illumination on the `docker do-something` syntax and the Docker Windows app. 
+
+Turning to that app for a moment: The `alpine/git` repo features four action icons but only two are activated: 
+Start and Delete. It's status is EXITED(0). The `docker-tutorial` Docker container is RUNNING on port 80 and 
+fiveicons are active: Open in browser, CLI, Stop, Restart and Delete. 
+
+Clicking on the **CLI** icon gets me a shell window with a `#` prompt. So this is the Part B of the Docker
+container: Not only is it "running as a program" but it also "has a shell where I am root". Here is a point of
+interest: The process list command `ps -ef` turns up one `master` process, quantity eight `worker process`, 
+one `sh` shell and of course `ps -ef` itself. The master and eight workers are all under the `nginx` web server. 
+So that is in short the smoking gun of "what this container is doing as an exectuable program" (in addition to
+running a shell). 
+
+Ok so there is a Docker image out there; and a Docker executable. Is this like a JVM? Going to the executable
+from the image is ... well we did a build in the tutorial so I'm voting on the JVM idea. Anyway you get
+something (where is it???) and you then run it and there is your textbook quote. 
+
+
+
+
 
