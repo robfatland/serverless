@@ -4,6 +4,11 @@
 
 
 Need to factor in; [Appendices](#appendices) maybe?
+### Before we get started...
+
+* [Appendices](#appendices)
+    * [Appendix on Docker containers](#docker-for-the-uninitiated)
+        * A [remark on WSL 2 for running containers on Windows](#understanding-docker-in-relation-to-wsl-2) 
 
 
 ***What are we doing? And why?***
@@ -424,7 +429,7 @@ available online.
 
 ## Appendices
 
-### Docker for Philistines
+### Docker for the uninitiated
 
 - [Windows installation](https://docs.docker.com/docker-for-windows/install/)
 - Download the installer, run through the installation, start the Docker app (this takes some time)
@@ -456,7 +461,23 @@ Ok so there is a Docker image out there; and a Docker executable. Is this like a
 from the image is ... well we did a build in the tutorial so I'm voting on the JVM idea. Anyway you get
 something (where is it???) and you then run it and there is your textbook quote. 
 
+### Understanding Docker in relation to WSL 2
 
+From [this Docker Desktop page](https://docs.docker.com/docker-for-windows/wsl/) about the WSL 2 backend: 
+
+> Windows Subsystem for Linux (WSL) 2 introduces a significant architectural change as it is a full Linux 
+> kernel built by Microsoft, allowing Linux containers to run natively without emulation. With Docker Desktop 
+> running on WSL 2, users can leverage Linux workspaces and avoid having to maintain both Linux and Windows 
+> build scripts. In addition, WSL 2 provides improvements to file system sharing, boot time, and allows 
+> access to some cool new features for Docker Desktop users.
+
+> Docker Desktop uses the dynamic memory allocation feature in WSL 2 to greatly improve the resource 
+> consumption. This means, Docker Desktop only uses the required amount of CPU and memory resources 
+> it needs, while enabling CPU and memory-intensive tasks such as building a container to run much faster.
+
+> Additionally, with WSL 2, the time required to start a Docker daemon after a cold start is 
+> significantly faster. It takes less than 10 seconds to start the Docker daemon when compared 
+> to almost a minute in the previous version of Docker Desktop.
 
 
 
