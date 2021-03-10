@@ -15,20 +15,20 @@ Need to factor in; [Appendices](#appendices) maybe?
 
 
 * Answer: We’re building an Azure version of a serverless function in Python 3 
-* Result: Testable URL + context: Building operational research code on the cloud
-* S4: Azure Functions are $cheap, serverless, secure and scalable.
-* Cost: Free for the first 400TB / one million executions
+* Result: Testable URL + context: Building operational research code on the cloud, lightweight version
+* Consider this **S4** mnemonic: Azure Functions are **$cheap, serverless, secure and scalable**.
+* Cost: Free for the first 400TB / one million executions. 400TB of what???? (kilroy)
 * Serverless structure: Trigger → Code runs → Output
 
 
 ***Why Azure? Why Serverless?***
 
 
-* Azure: One of four big clouds we know about. Many well-designed, proven features.
-* If you are somewhere in the vicinity of ‘code-writing data scientist’: Azure has a great integrated environment. It makes you super productive.
+* Azure: One of four big clouds. Many well-designed, proven features.
+* If you are somewhere in the vicinity of ‘code-writing data scientist’: Azure has a great integrated environment that makes you super productive.
 * A good term to learn is infrastructure: the scaffolding of a computing system… 
-* (Folks who think the infrastructure is the interesting stuff are your friends!)
-* For a business: Put a Service on the web! Now you can make this using Serverless technology. It will automatically scale up (makes copies of itself) to meet customer demand. Nobody ever had a bad waiting experience with your Service. Five stars for you!
+    * (Folks who think the infrastructure is the interesting stuff are your friends!)
+* For a business: Put a Service on the web! Now you can make this using Serverless technology. It will automatically scale up (makes copies of itself) to meet customer demand. "Nobody ever had a bad waiting experience using your Service. Five stars for you!"
 * There are many (free) resources on the web to help you learn Serverless
 
 
@@ -36,17 +36,17 @@ Need to factor in; [Appendices](#appendices) maybe?
 
 
 * Define a RG better
-* Could use a punchline to the Azure process beyond ‘it deployed’
+* Could use a punchline to the portal segment beyond ‘yay it deployed’
 * name all the moving parts of an (empty!) AF
 * printf(‘this is a debugging statement’) minimum viable debug nod
 * 3 listed entities in the RG for the AF
 * Do not break the recipe e.g. where __init__.py resides onless ye know
 * In VSCode: Can manipulate the layout in menu bar to isolate FUNCTIONS
-* AF wizard: Implications of Anonymous versus…
+* AF wizard: Portal: Implications of Anonymous versus…
 * Add something to requirements.txt and use that in a simple manner
-* Could use more support for Window Python 3.8+ 64 PATH: How to set?
+* Could use more support for Window Python 3.8+ 64 PATH: How to set? Also diff between Path and PythonPath is what?
 * More on automation via “provide template”
-* On trigger: GET, POST and the example code has also the “body parse”
+* On trigger: GET, POST and the example code has also the “body parse” > Appendix
 * Close the loop: Go back to Azure and identify AF + RG + SA for new AF
 * Give Output examples: an HTTP response, a new file stored in some particular spot (SA)
 * Think about / cover the import of private environment variables; and related: Rationale: How do we get our AF code on GitHub safely? There is already a lot of machinery in place in VSCode. 
