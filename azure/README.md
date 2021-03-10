@@ -5,7 +5,7 @@
 The goal here is to create a working Azure Function, an online service that factors an integer. 
 Because no Virtual Machine is explicitly involved in this process the result is called a 'serverless function'.
 This suggests visualizing the cloud as a sort of programmable computer. To do follow the provided 'procedural
-please open [`tutorial.md`](https://github.com/robfatland/serverless/azure/tutorial.md) in this folder. 
+please open [`tutorial.md`](https://github.com/robfatland/serverless/blob/main/azure/tutorial.md) in this folder. 
 To understand the contextual basis here please continue reading. 
 
 
@@ -136,7 +136,7 @@ in the browser address bar adds a `key=value` string. The key is the letter `n` 
 
 With this as a contextual starting point, the idea is we are now ready to build. This is written up in
 the `tutorial.md` file. 
-So the full URL will be 
+So the full URL will be -- **actually this URL is disabled at the moment, probably does not work** --
 [`https://factoring.azurewebisites.net/api/factoring?n=15`](https://factoring.azurewebisites.net/api/factoring?n=15).
 
 
