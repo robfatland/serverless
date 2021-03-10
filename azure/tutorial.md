@@ -205,7 +205,7 @@ It is available for free for all common operating systems.
 
 
 Note: If you are working
-in a pre-built environment such as a Docker container: It may already be installed. 
+in a pre-built environment: It may already be installed. 
 
 
 ## 5 Installing extensions, Python, and so forth
