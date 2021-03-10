@@ -2,28 +2,45 @@
 
 ## Overview
 
-The goal here is to create a working Azure Function, an online service that factors an integer. To do this please 
-open the [`tutorial.md`](https://github.com/robfatland/serverless/azure/tutorial.md) file. To understand the 
-contextual basis for this exercise please continue reading. 
+The goal here is to create a working Azure Function, an online service that factors an integer. 
+Because no Virtual Machine is explicitly involved in this process the result is called a 'serverless function'.
+This suggests visualizing the cloud as a sort of programmable computer. To do follow the provided 'procedural
+please open [`tutorial.md`](https://github.com/robfatland/serverless/azure/tutorial.md) in this folder. 
+To understand the contextual basis here please continue reading. 
 
 
-What is the purpose of serverless computing? In this context we are interested in research (or learning how to
-build research infrastructure). Serverless is an interesting option for a number of reasons. It abstracts away 
-the usual 'underlying computer' where everything happens. This means we dispense with a lot of preparatory 
-fussing around, not to mention patching operating systems and do on. Serverless functions are pretty cheap. 
-With a little care: Serverless computing is also very secure.
-And finally since they can exist as public endpoints on the internet serverless functions can be used by collaborators
-or by other scientists we may not even know. 
+### What is the purpose of serverless computing? 
+
+We have different degrees of effort involved, cost, and personal interaction potential when we build computing
+environments. 'Serverless' is on the simple-cheap-not-very-interactive end of this spectrum. Our contextual goal
+is supporting research, i.e. building research infrastructure. Serverless abstracts away 
+the concept of an 'underlying computer' where the creation process takes place. This dispenses with preparatory 
+effort: Identifying a machien to use, setting up credentials, logging in, perhaps patching the operating system
+and so on. Serverless functions (also called 'microservices') are both cheap and (with a little care) very secure.  
+
+One other key point: As serverless functions can exist as public endpoints, or 'URLs on the internet', 
+serverless functions can be used by collaborators or by other scientists we do not know. 
 
 
-## Not addressed: Working from a container
+### Where do we build?
+
+If a serverless function on Azure is not built "on some virtual machine on the cloud"... where *do* we build it? 
+The thought process is that we already have a laptop or a desktop connected to the internet; so we will follow 
+two courses of action: First using a browser to connect to a portal; and then second by installing an app, 
+an Integrated Development Environment, that is designed for developing and testing serverless functions before
+conveniently uploading them to the Azure cloud; where they 'live and operate' as needed. 
 
 
-What we would like is a containerized environment that acts like a no-cost no-risk development sandbox. 
-Ideally I connect through a browser pane or something like that; so my native environment (PC, Mac, Linux) is immaterial.
+This browser/IDE approach could be set up on some other computer as well of course. We won't take that approach
+here so the preparation will involve three parts: Making sure you have Azure credentials, making sure you have 
+a web-connected browser, and installing the IDE. The IDE we will use is called Visual Studio Code, abbreviated 
+VSCode, and it is available for PC, Mac and Linux operating systems at no cost. 
 
 
-## Approaches to building serverless
+## Additional context
+
+
+### Approaches to building serverless
 
 
 The idea is to create a very simple serverless function on Azure. These are called Azure Functions. 
@@ -42,9 +59,6 @@ How to go about building? There are multiple approaches.
         - VSCode has a simple "deploy to Azure" mechanism
         - VSCode manages authentication so I do not have to constantly be logging in
         - VSCode integrates with containers
-
-
-## Core chain of ideas
 
 
 ### The cloud exists
@@ -122,4 +136,8 @@ in the browser address bar adds a `key=value` string. The key is the letter `n` 
 
 With this as a contextual starting point, the idea is we are now ready to build. This is written up in
 the `tutorial.md` file. 
-So the full URL will be `https://factoring.azurewebisites.net/api/factoring?n=15`. 
+So the full URL will be 
+[`https://factoring.azurewebisites.net/api/factoring?n=15`](https://factoring.azurewebisites.net/api/factoring?n=15).
+
+
+Replace the `15` with some other number to double-check we're doing an actual calculation!
