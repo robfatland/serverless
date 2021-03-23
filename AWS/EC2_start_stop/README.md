@@ -21,3 +21,17 @@ That is a comprehensive walk-through that creates both a Start and a Stop Lambda
     * As I'm doing this quickly I just did "every 10 hours" rather than cron format
     * After the alarm was set up I returned to the Lambda function and did a refresh: Now the CloudWatch alarm appears as a trigger
         * In other words: I did not have to do this from within the Lambda Function configuration page; but could have
+
+
+```
+import json
+import boto3
+region = 'us-west-2'
+instances = ['i-aaabbbcccdddeeeff']
+ec2 = boto3.client('ec2', region_name=region)
+
+def lambda_handler(event, context):
+    print('start stopping instances')
+    ec2.stop_instances(InstanceIds=instances)
+    print('done stopping instances')
+```
