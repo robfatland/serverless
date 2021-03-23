@@ -27,11 +27,15 @@ To begin with I will only do the **Stop** operation.
     * Save the code and be sure to **Deploy** it
 
 * Creating the CloudWatch alarm trigger
-    * Did "every 10 hours" rather than better idea: kilroy cron format
-    * After the alarm was set up I returned to the Lambda function and did a refresh: Now the CloudWatch alarm appears as a trigger
+    * Name, description, choose "Schedule" and "Cron expression"
+    * My cron format is `0  5  ?  *  3-7  *` which translates as "5AM Zulu every Tuesday through Saturday" (10AM PDT)
+        * Days of the week are 1-7 SUN-SAT; but it uses less-than logic
+        * The ? wildcard means use days of week, not days of month (3rd field)
+    * After the alarm set: Return to the Lambda function and did a refresh: Now the CloudWatch alarm appears as a trigger
         * I could have but did not do this from within the Lambda Function page
 
-This is the code
+This function would be much cooler if it also sent me an email that it ran. 
+Here is the code:
 
 ```
 import boto3
