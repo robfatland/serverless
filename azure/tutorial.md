@@ -242,18 +242,21 @@ There are four things to note here
     * This means that your current view of the Portal is focused on your Azure Function
 * The scrollable left side-bar is a context menu for the many facets of the Azure Function
     * By default *Overview* is selected and this is what we see in the main-central panel
-    * Over to the right in the main panel is a URL
+* Along the top of the top of the main-center Overview pane is a series of common tasks: **Browse**, **Refresh**, **Stop**, **Restart** etcetera
+    * These refer to the state of the Azure Function
+    * Note that the Function can be stopped without it being deleted
 
-<BR><BR>
-   
+
+Over to the right in the main panel is the URL associated with the Azure Function
+
+<BR>
 
 <img src="https://github.com/robfatland/serverless/blob/main/azure/images/16_3_Function_App_URL.png" alt="drawing" width="600"/>
 
-<BR><BR>
-   
+<BR>
 
-Click on the URL to open a default page. This is what an Azure Function does when we do not give it any specific 
-code to run. So we can verify that it created a working URL but it is not too interesting at this point. 
+Click on the URL. This should open a default page in your browser.  This is what an Azure Function does when we do not give it a 
+specific job to do (code to run). We verify here that the Function was created and works, albeit it is not too interesting at this point. 
 
 
 Now let's return to the portal Azure Function view and navigate up a level to **Home** and then down into 
@@ -263,7 +266,6 @@ this Resource Group including the Serverless Function we just created.
 
 <BR><BR>
    
-
 <img src="https://github.com/robfatland/serverless/blob/main/azure/images/16_4_Resource_Group_Overview.png" alt="drawing" width="600"/>
 
 <BR><BR>
