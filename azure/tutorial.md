@@ -221,13 +221,16 @@ auto-generate Azure Functions, i.e. do this same task in an automated manner.
 
 ## 4 Switching to Visual Studio Code
 
+We now depart from the Azure portal in favor of a local development application 
+called Visual Studio Code, abbreviated VSCode. On the one hand looking at the Azure
+cloud through the portal gives a pretty undisguised view of the fact that cloud computing
+comes with a lot of details. However it would be nice to work in a more streamlined
+environment without the profusion of detail; and that is just what VSCode is.
 
-Install the Visual Studio Code (VSCode) application on your Development System. 
-It is available for free for all common operating systems. 
 
+Install if necessary and start up the Visual Studio Code (VSCode) application on 
+your Development System. 
 
-Note: If you are working
-in a pre-built environment: It may already be installed. 
 
 
 ## 5 Installing extensions, Python, and so forth
@@ -235,13 +238,13 @@ in a pre-built environment: It may already be installed.
 
 * Make sure you have Python 3.8+ 64-bit installed on your development system. 
     * This avoids a miasma of inexplicable *does not work* outcomes.
-    * Ensure also that your Path is set to run this version of Python
-* You may wish to update `pip` using the command `python -m pip install --upgrade pip`
-* Ensure that the `requests` package is installed
-    * From the Command console: `python -m pip install requests`
-* Install Azure extensions in VSCode *from* VSCode: *Azure Functions Core Tools*. 
-    * [This webpage](https://github.com/Azure/azure-functions-core-tools#installing) may help
-    * *Azure Core Tools* can't hurt.
+    * Ensure also that your PATH environment variable is set to run this version of Python
+* You can update `pip` using the command `python -m pip install --upgrade pip`
+* Install the Python `requests` package
+    * `python -m pip install requests`
+* Install *Azure Core Tools* *from within* VSCode 
+    * See [this webpage](https://github.com/Azure/azure-functions-core-tools#installing)
+    * This introduces using the Action Bar in VSCode: Vertical icon bar at far left
 
 
 
