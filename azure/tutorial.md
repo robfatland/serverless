@@ -176,35 +176,47 @@ If all goes well you arrive at a confirmation message.
 <img src="https://github.com/robfatland/serverless/blob/main/azure/images/16_1_Deployment_complete.png" alt="drawing" width="600"/>
 
 
-Now let's take stock of the Azure Function: Click on **Go to resource** and focus on the left side-bar. At the top is
-the name of the Azure Serverless Function we just created; and below that is a scrollable list of facets of this
-resource. By default the *Overview* is selected and this is what we see in the main/central panel. 
+Now let's take stock of the Azure Function: Click on **Go to resource**.
 
 
-<img src="https://github.com/robfatland/serverless/blob/main/azure/images/17_1_FunctionApp_resources.png" alt="drawing" width="500"/>
+<image here>
 
 
-Far down on the scroll menu is a section on Monitoring. This is where one would begin in a debugging process. 
+There are four things to note here. 
+* The upper left corner features a link to return to your Home view
+* The left sidebar title is the name of your Azure Function
+    * This means that your current view of the Portal is focused on your Azure Function
+* The scrollable left side-bar is a context menu for the many facets of the Azure Function
+    * By default *Overview* is selected and this is what we see in the main-central panel
+    * Over to the right in the main panel is a URL
 
 
-<img src="https://github.com/robfatland/serverless/blob/main/azure/images/18_1_FunctionApp_Monitoring.png" alt="drawing" width="400"/>
+<url image>
 
 
-Now let's navigate up a level to **Home** and then down into our **Resource Group**. Click the **Home** link at the upper left, 
-then click the resource group **rg-amlclass-netid**. Here is a listing of resources including the Serverless Function we just 
-created. 
+Click on the URL to open a default page. This is what an Azure Function does when we do not give it any specific 
+code to run. So we can verify that it created a working URL but it is not too interesting at this point. 
 
+
+Now let's return to the portal Azure Function view and navigate up a level to **Home** and then down into 
+the default **Resource Group**. Click the **Home** link at the upper left, 
+then click the resource group **rg-amlclass-netid**. Here we should find a listing of the resources in 
+this Resource Group including the Serverless Function we just created. 
 
 
 This concludes the creation of an Azure Function using the Azure portal. 
-Notice that this function does not actually **do** anything because we installed no code. 
-
+While the Azure Function is not terribly inspiring we have established a "Portal view" of both the 
+creation process and navigation of the Azure cloud on a web browser. 
 
 
 ## 3 Aside on templates
 
 
-In the portal: **Generate template** produces JSON that can be "run" to recreate what was done manually. 
+In the portal Overview of the Azure Function at the far upper right is a hyperlink
+that reads **JSON view**. It is fine to click this link. The result is a pop-up
+text document that describes the creation of your Azure Function using a descriptive
+protocol called JavaScript Object Notation (JSON). This text can be used to 
+auto-generate Azure Functions, i.e. do this same task in an automated manner. 
 
 
 ## 4 Switching to Visual Studio Code
