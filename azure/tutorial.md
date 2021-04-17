@@ -70,10 +70,11 @@ skip sections *2* and *3* and continue with
 [*section 4*](#4-switching-to-visual-studio-code).
 
 
-**A note on 'Development System'**: Your Development System is a computer + OS where you develop code for deployment to Azure Functions.
-It may be your laptop; it may be a Docker container; it may be a cloud VM; it may be a large pile of coconuts. Whatever it is you
-will need this Development System to follow along on this walkthrough. In parts 4 and 5 we describe what you
-will need to install there; so before getting started you may wish to go through that to be prepared. 
+**A note on 'Development System'**: Your Development System is a computer including its operating system;
+where you develop code for deployment to Azure Functions.
+It may be your laptop; it may be a Docker container; it may be a cloud VM; it may be a large pile of coconuts. 
+Whatever it is you will need this Development System to follow along on this walkthrough. In parts 4 and 5 we 
+describe what you will need to install there; so please go through that in preparation. 
 
 
 
@@ -102,10 +103,16 @@ of using the cloud is there; so the idea of starting out here is to do a bit of 
 As noted above this can be skipped entirely in favor of moving ahead to step 4 of this walkthrough.
 
 
-A 'Resource' is the generic term for an item you'd like to allocate and use. 
+A 'Resource' is the generic term for an item you'd like to allocate and use. A 'Resource Group' is a logical container
+for resources that are associated with one another (in your view). We treat a Resource Group here as just simply 
+"where everything we build goes". 
 
 
 <img src="https://github.com/robfatland/serverless/blob/main/azure/images/10_1_Create_a_resource.png" alt="drawing" width="200"/>
+
+
+Choose 'Marketplace' rather than 'Custom'. The Azure Marketplace is essentially a large collection of cloud resources 
+and services; so it is where we will find things like Serverless Functions and Virtual Machines and so on. 
 
 
 Type 'function' in the search window to help select the resource you want: An Azure Function App. 
@@ -120,36 +127,44 @@ Click on the **Create** button; so we can next proceed to a series of screen cap
 <img src="https://github.com/robfatland/serverless/blob/main/azure/images/10_3_Create_Function_App.png" alt="drawing" width="200"/>
 
 
-The **Basics** tab of the wizard defines some details -- including the name -- of the Azure Function. Defaults are fine but be
-sure to check **Code**, and choose **Python** and **3.8** as shown. The region is ideally geographically close to you; this 
-helps keep network access fast for you and otherwise makes little difference. 
+The **Basics** tab of the wizard defines some details -- including the name -- of the Azure Function. Details to fill in:
+
+* **Resource Group**: Choose the drop-down default
+* Check **Code**, not Docker Container (that was the previous tutorial)
+* Choose **Python** and **3.8** 
+* Choose region **US West** as it is geographically closest (fastest connection speed) 
+
+
+The Resource Group drop-down should show something like 
+`rg-amlclass-uwnetid`. This is your default Resource Group, it already exists, so easy choice.
 
 
 <img src="https://github.com/robfatland/serverless/blob/main/azure/images/10_4_Function_App_Wizard.png" alt="drawing" width="700"/>
 
 
 The **Hosting** tab should resemble the one shown below. Notice that a Storage Account is created by default and associated
-with the Function App. The last box at the bottom indicates we are building a serverless function.
+with the Function App. A Storage Account is a logical container like a Resource Group but specific to data storage modes
+on the cloud. 
 
 
 <img src="https://github.com/robfatland/serverless/blob/main/azure/images/12_1_Hosting_wizard.png" alt="drawing" width="700"/>
 
 
-In the **Monitoring** tab you can choose to enable Application Insights. (This could also be done later.) This will associate tracking
-resources with the Azure Function. These are helpful tools for understanding behavior and debugging problems.
+In the **Monitoring** tab it is not possible to enable Application Insights. This is a tag-along service
+that helps track resource usage: For understanding behavior and debugging problems. We will skip it; leave Disabled (No).
 
 
 <img src="https://github.com/robfatland/serverless/blob/main/azure/images/13_1_Monitoring_wizard.png" alt="drawing" width="700"/>
 
 
-The **Tagging** tab allows you to annotate this Azure Function with key-value pairs. This is extremely valuable -- when one
-takes the time to do it -- upon trying to remember what this Azure Function does after not thinking about it for four months. 
+The **Tagging** tab allows you to annotate this Azure Function with key-value pairs. This helps immensely when trying 
+to remember what the Azure Function does after not thinking about it for four months. 
 
 
 <img src="https://github.com/robfatland/serverless/blob/main/azure/images/14_1_Tagging_wizard.png" alt="drawing" width="700"/>
 
 
-The final **Review / Create** tab allows you to launch the creation process. 
+The final **Review / Create** tab allows you to launch the creation process. Look over the summary and click on **Create** at bottom left.
 
 
 <img src="https://github.com/robfatland/serverless/blob/main/azure/images/15_1_Review_Create_wizard.png" alt="drawing" width="500"/>
@@ -161,33 +176,28 @@ If all goes well you arrive at a confirmation message.
 <img src="https://github.com/robfatland/serverless/blob/main/azure/images/16_1_Deployment_complete.png" alt="drawing" width="600"/>
 
 
-Now let's take stock of the Azure Function. This is a long (scrollable) list of its attributes or facets.
+Now let's take stock of the Azure Function: Click on **Go to resource** and focus on the left side-bar. At the top is
+the name of the Azure Serverless Function we just created; and below that is a scrollable list of facets of this
+resource. By default the *Overview* is selected and this is what we see in the main/central panel. 
 
 
 <img src="https://github.com/robfatland/serverless/blob/main/azure/images/17_1_FunctionApp_resources.png" alt="drawing" width="500"/>
 
 
-Far down on that list is a section on Monitoring. Again this is where one would begin for careful debugging.
+Far down on the scroll menu is a section on Monitoring. This is where one would begin in a debugging process. 
 
 
 <img src="https://github.com/robfatland/serverless/blob/main/azure/images/18_1_FunctionApp_Monitoring.png" alt="drawing" width="400"/>
 
 
-Again here is the resource group associated with this Azure Function.
+Now let's navigate up a level to **Home** and then down into our **Resource Group**. Click the **Home** link at the upper left, 
+then click the resource group **rg-amlclass-netid**. Here is a listing of resources including the Serverless Function we just 
+created. 
 
 
-<img src="https://github.com/robfatland/serverless/blob/main/azure/images/19_1_Resource_Group_on_portal.png" alt="drawing" width="400"/>
 
-
-Here are the three resources in that resource group: The Azure Function, its associated Application Insights resource for monitoring, 
-and a dedicated storage account.
-
-
-<img src="https://github.com/robfatland/serverless/blob/main/azure/images/19_2_FunctionApp_three_components.png" alt="drawing" width="800"/>
-
-
-This concludes the creation of the Azure Function using the portal. The idea was to illustrate the basic nature of the 
-interaction.
+This concludes the creation of an Azure Function using the Azure portal. 
+Notice that this function does not actually **do** anything because we installed no code. 
 
 
 
