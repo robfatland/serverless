@@ -150,9 +150,6 @@ Note: The Resource Group drop-down should show something like
 `rg-amlclass-netid`. This is your default Resource Group, it already exists, so it is an easy choice.
 
 <BR><BR>
-   
-
-
 
 <img src="https://github.com/robfatland/serverless/blob/main/azure/images/10_4_Function_App_Wizard_Basics_Tab.png" alt="drawing" width="700"/>
 
@@ -170,8 +167,6 @@ with the Function App. A Storage Account is a logical container like a Resource 
 on the cloud. 
 
 <BR><BR>
-   
-
 
 <img src="https://github.com/robfatland/serverless/blob/main/azure/images/12_1_Function_App_Wizard_Hosting.png" alt="drawing" width="700"/>
 
@@ -209,6 +204,10 @@ The final **Review / Create** tab allows you to launch the creation process. Loo
    
 
 <img src="https://github.com/robfatland/serverless/blob/main/azure/images/15_1_Function_App_Wizard_Review_Create.png" alt="drawing" width="500"/>
+
+<BR>
+   
+<img src="https://github.com/robfatland/serverless/blob/main/azure/images/15_2_Function_App_Wizard_Create_Button.png" alt="drawing" width="500"/>
 
 <BR><BR>
    
