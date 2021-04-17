@@ -200,25 +200,39 @@ to remember what the Azure Function does after not thinking about it for four mo
 
 <img src="https://github.com/robfatland/serverless/blob/main/azure/images/14_1_Function_App_Wizard_Tagging.png" alt="drawing" width="700"/>
 
+<BR><BR>
+   
 
 The final **Review / Create** tab allows you to launch the creation process. Look over the summary and click on **Create** at bottom left.
 
+<BR><BR>
+   
 
 <img src="https://github.com/robfatland/serverless/blob/main/azure/images/15_1_Function_App_Wizard_Review_Create.png" alt="drawing" width="500"/>
 
+<BR><BR>
+   
 
 If all goes well you arrive at a confirmation message.
 
+<BR><BR>
+   
 
 <img src="https://github.com/robfatland/serverless/blob/main/azure/images/16_1_Function_App_Wizard_Deployment_Complete.png" alt="drawing" width="600"/>
 
+<BR><BR>
+   
 
 Now let's take stock of the Azure Function: Click on **Go to resource**.
 
+<BR><BR>
+   
 
 <img src="https://github.com/robfatland/serverless/blob/main/azure/images/16_2_Function_App_Overview.png" alt="drawing" width="600"/>
 
 
+<BR><BR>
+   
 
 There are four things to note here
 
@@ -230,9 +244,13 @@ There are four things to note here
     * By default *Overview* is selected and this is what we see in the main-central panel
     * Over to the right in the main panel is a URL
 
+<BR><BR>
+   
 
 <img src="https://github.com/robfatland/serverless/blob/main/azure/images/16_3_Function_App_URL.png" alt="drawing" width="600"/>
 
+<BR><BR>
+   
 
 Click on the URL to open a default page. This is what an Azure Function does when we do not give it any specific 
 code to run. So we can verify that it created a working URL but it is not too interesting at this point. 
@@ -243,23 +261,28 @@ the default **Resource Group**. Click the **Home** link at the upper left,
 then click the resource group **rg-amlclass-netid**. Here we should find a listing of the resources in 
 this Resource Group including the Serverless Function we just created. 
 
+<BR><BR>
+   
 
 <img src="https://github.com/robfatland/serverless/blob/main/azure/images/16_4_Resource_Group_Overview.png" alt="drawing" width="600"/>
 
+<BR><BR>
+   
 
 This concludes the creation of an Azure Function using the Azure portal. 
-While the Azure Function is not terribly inspiring we have established a "Portal view" of both the 
-creation process and navigation of the Azure cloud on a web browser. 
+While the Azure Function is not terribly inspiring we have accomplished two things:
+We established a "Portal view" of the cloud resource creation process;
+and we have done some navigation of the Azure cloud via a web browser. 
 
 
-## 3 Aside on templates
+## 3 Aside on templates and code
 
 
 In the portal Overview of the Azure Function at the far upper right is a hyperlink
 that reads **JSON view**. It is fine to click this link. The result is a pop-up
 text document that describes the creation of your Azure Function using a descriptive
-protocol called JavaScript Object Notation (JSON). This text can be used to 
-auto-generate Azure Functions, i.e. do this same task in an automated manner. 
+protocol called JavaScript Object Notation (JSON). This text can be used as a template
+to auto-generate Azure Functions, i.e. do this same task in an automated manner. 
 
 
 ## 4 Switching to Visual Studio Code
