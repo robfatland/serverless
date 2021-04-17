@@ -116,9 +116,12 @@ and services; it is where we find things like Serverless Functions and Virtual M
 
 
 Type 'function' in the search window to help select the resource you want: An Azure Function App. 
-
+   
 
 <img src="https://github.com/robfatland/serverless/blob/main/azure/images/10_2_Choose_Azure_Function_App.png" alt="drawing" width="200"/>
+
+<BR><BR>
+   
 
 
 Click on the **Create** button. We proceed to a create *wizard* process: We go through each of a series of tabs
@@ -126,7 +129,13 @@ entering key information. At the end we click another ***Create*** button so tha
 From that point on the Function will exist (it even has its own URL) until we choose to delete it.
 
 
+<BR><BR>
+   
+
 <img src="https://github.com/robfatland/serverless/blob/main/azure/images/10_3_Create_Function_App.png" alt="drawing" width="200"/>
+
+<BR><BR>
+   
 
 
 The first tab of the Create wizard is **Basics**. Details we fill in:
@@ -140,8 +149,15 @@ The first tab of the Create wizard is **Basics**. Details we fill in:
 Note: The Resource Group drop-down should show something like 
 `rg-amlclass-netid`. This is your default Resource Group, it already exists, so it is an easy choice.
 
+<BR><BR>
+   
+
+
 
 <img src="https://github.com/robfatland/serverless/blob/main/azure/images/10_4_Function_App_Wizard_Basics_Tab.png" alt="drawing" width="700"/>
+
+<BR><BR>
+   
 
 
 For each Wizard tab -- once it is filled in -- choose the right-most option at the bottom of the page
@@ -149,24 +165,38 @@ to go to the next tab. Don't choose **Review and Create** as this skips
 over the intervening tabs. 
 
 
-The **Hosting** tab should resemble the one shown below. Notice that a Storage Account is created by default and associated
+Next is the **Hosting** tab. This should resemble the one shown below. Notice that a Storage Account is created by default and associated
 with the Function App. A Storage Account is a logical container like a Resource Group but specific to data storage modes
 on the cloud. 
+
+<BR><BR>
+   
 
 
 <img src="https://github.com/robfatland/serverless/blob/main/azure/images/12_1_Function_App_Wizard_Hosting.png" alt="drawing" width="700"/>
 
+<BR><BR>
+   
 
-In the **Monitoring** tab it is not possible to enable Application Insights. This is a tag-along service
-that helps track resource usage: For understanding behavior and debugging problems. We will skip it; leave Disabled (No).
+
+Next comes the **Monitoring** tab. This offers to turn on a service called Application Insights. This is a tag-along service
+that helps track resource usage: For understanding behavior and debugging problems. We will skip it; leave it Disabled (No).
+There may be a message saying we can't use it in any case. 
+
+<BR><BR>
+   
 
 
 <img src="https://github.com/robfatland/serverless/blob/main/azure/images/13_1_Function_App_Wizard_Monitoring.png" alt="drawing" width="700"/>
 
 
-The **Tagging** tab allows you to annotate this Azure Function with key-value pairs. This helps immensely when trying 
+<BR><BR>
+   
+The **Tagging** tab allows us to annotate this Azure Function with key-value pairs. This helps immensely when trying 
 to remember what the Azure Function does after not thinking about it for four months. 
 
+<BR><BR>
+   
 
 <img src="https://github.com/robfatland/serverless/blob/main/azure/images/14_1_Function_App_Wizard_Tagging.png" alt="drawing" width="700"/>
 
