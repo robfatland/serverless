@@ -207,7 +207,7 @@ The final **Review / Create** tab allows you to launch the creation process. Loo
 
 <BR>
    
-<img src="https://github.com/robfatland/serverless/blob/main/azure/images/15_2_Function_App_Wizard_Create_Button.png" alt="drawing" width="500"/>
+<img src="https://github.com/robfatland/serverless/blob/main/azure/images/15_2_Function_App_Wizard_Create_Button.png" alt="drawing" width="100"/>
 
 <BR><BR>
    
