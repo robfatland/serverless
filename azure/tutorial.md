@@ -144,6 +144,11 @@ Note: The Resource Group drop-down should show something like
 <img src="https://github.com/robfatland/serverless/blob/main/azure/images/10_4_Function_App_Wizard_Basics_Tab.png" alt="drawing" width="700"/>
 
 
+For each Wizard tab -- once it is filled in -- choose the right-most option at the bottom of the page
+to go to the next tab. Don't choose **Review and Create** as this skips
+over the intervening tabs. 
+
+
 The **Hosting** tab should resemble the one shown below. Notice that a Storage Account is created by default and associated
 with the Function App. A Storage Account is a logical container like a Resource Group but specific to data storage modes
 on the cloud. 
