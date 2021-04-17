@@ -92,7 +92,7 @@ minimize any cost impact and/or risk it is a good idea to delete everything when
 ## 2 Portal work
 
 
-On logging in to the [Azure portal](https://portal.azure.com) you see the home page, the upper left corner looking something like this: 
+On logging on to the [Azure portal](https://portal.azure.com) you see the home page, the upper left corner looking something like this: 
 
 
 <img src="https://github.com/robfatland/serverless/blob/main/azure/images/00_1_Azure_portal.png" alt="drawing" width="400"/>
@@ -111,8 +111,8 @@ for resources that are associated with one another (in your view). We treat a Re
 <img src="https://github.com/robfatland/serverless/blob/main/azure/images/10_1_Create_a_resource.png" alt="drawing" width="200"/>
 
 
-Choose 'Marketplace' rather than 'Custom'. The Azure Marketplace is essentially a large collection of cloud resources 
-and services; so it is where we will find things like Serverless Functions and Virtual Machines and so on. 
+Choose ***'Marketplace'*** rather than ***'Custom'***. The Azure Marketplace is a large collection of cloud resources 
+and services; it is where we find things like Serverless Functions and Virtual Machines and so on. 
 
 
 Type 'function' in the search window to help select the resource you want: An Azure Function App. 
@@ -121,13 +121,15 @@ Type 'function' in the search window to help select the resource you want: An Az
 <img src="https://github.com/robfatland/serverless/blob/main/azure/images/10_2_Choose_Azure_Function_App.png" alt="drawing" width="200"/>
 
 
-Click on the **Create** button; so we can next proceed to a series of screen captures of the wizard-guided process.
+Click on the **Create** button. We proceed to a create *wizard* process: We go through each of a series of tabs
+entering key information. At the end we click another ***Create*** button so that Azure starts up our Function.
+From that point on the Function will exist (it even has its own URL) until we choose to delete it.
 
 
 <img src="https://github.com/robfatland/serverless/blob/main/azure/images/10_3_Create_Function_App.png" alt="drawing" width="200"/>
 
 
-The **Basics** tab of the wizard defines some details -- including the name -- of the Azure Function. Details to fill in:
+The first tab of the Create wizard is **Basics**. Details we fill in:
 
 * **Resource Group**: Choose the drop-down default
 * Check **Code**, not Docker Container (that was the previous tutorial)
@@ -135,11 +137,11 @@ The **Basics** tab of the wizard defines some details -- including the name -- o
 * Choose region **US West** as it is geographically closest (fastest connection speed) 
 
 
-The Resource Group drop-down should show something like 
-`rg-amlclass-uwnetid`. This is your default Resource Group, it already exists, so easy choice.
+Note: The Resource Group drop-down should show something like 
+`rg-amlclass-netid`. This is your default Resource Group, it already exists, so it is an easy choice.
 
 
-<img src="https://github.com/robfatland/serverless/blob/main/azure/images/10_4_Function_App_Wizard.png" alt="drawing" width="700"/>
+<img src="https://github.com/robfatland/serverless/blob/main/azure/images/10_4_Function_App_Wizard_Basics_Tab.png" alt="drawing" width="700"/>
 
 
 The **Hosting** tab should resemble the one shown below. Notice that a Storage Account is created by default and associated
@@ -147,42 +149,45 @@ with the Function App. A Storage Account is a logical container like a Resource 
 on the cloud. 
 
 
-<img src="https://github.com/robfatland/serverless/blob/main/azure/images/12_1_Hosting_wizard.png" alt="drawing" width="700"/>
+<img src="https://github.com/robfatland/serverless/blob/main/azure/images/12_1_Function_App_Wizard_Hosting.png" alt="drawing" width="700"/>
 
 
 In the **Monitoring** tab it is not possible to enable Application Insights. This is a tag-along service
 that helps track resource usage: For understanding behavior and debugging problems. We will skip it; leave Disabled (No).
 
 
-<img src="https://github.com/robfatland/serverless/blob/main/azure/images/13_1_Monitoring_wizard.png" alt="drawing" width="700"/>
+<img src="https://github.com/robfatland/serverless/blob/main/azure/images/13_1_Function_App_Wizard_Monitoring.png" alt="drawing" width="700"/>
 
 
 The **Tagging** tab allows you to annotate this Azure Function with key-value pairs. This helps immensely when trying 
 to remember what the Azure Function does after not thinking about it for four months. 
 
 
-<img src="https://github.com/robfatland/serverless/blob/main/azure/images/14_1_Tagging_wizard.png" alt="drawing" width="700"/>
+<img src="https://github.com/robfatland/serverless/blob/main/azure/images/14_1_Function_App_Wizard_Tagging.png" alt="drawing" width="700"/>
 
 
 The final **Review / Create** tab allows you to launch the creation process. Look over the summary and click on **Create** at bottom left.
 
 
-<img src="https://github.com/robfatland/serverless/blob/main/azure/images/15_1_Review_Create_wizard.png" alt="drawing" width="500"/>
+<img src="https://github.com/robfatland/serverless/blob/main/azure/images/15_1_Function_App_Wizard_Review_Create.png" alt="drawing" width="500"/>
 
 
 If all goes well you arrive at a confirmation message.
 
 
-<img src="https://github.com/robfatland/serverless/blob/main/azure/images/16_1_Deployment_complete.png" alt="drawing" width="600"/>
+<img src="https://github.com/robfatland/serverless/blob/main/azure/images/16_1_Function_App_Wizard_Deployment_Complete.png" alt="drawing" width="600"/>
 
 
 Now let's take stock of the Azure Function: Click on **Go to resource**.
 
 
-<image here>
+<img src="https://github.com/robfatland/serverless/blob/main/azure/images/16_2_Function_App_Overview.png" alt="drawing" width="600"/>
 
 
-There are four things to note here. 
+
+There are four things to note here
+
+
 * The upper left corner features a link to return to your Home view
 * The left sidebar title is the name of your Azure Function
     * This means that your current view of the Portal is focused on your Azure Function
@@ -191,7 +196,7 @@ There are four things to note here.
     * Over to the right in the main panel is a URL
 
 
-<url image>
+<img src="https://github.com/robfatland/serverless/blob/main/azure/images/16_3_Function_App_URL.png" alt="drawing" width="600"/>
 
 
 Click on the URL to open a default page. This is what an Azure Function does when we do not give it any specific 
@@ -202,6 +207,9 @@ Now let's return to the portal Azure Function view and navigate up a level to **
 the default **Resource Group**. Click the **Home** link at the upper left, 
 then click the resource group **rg-amlclass-netid**. Here we should find a listing of the resources in 
 this Resource Group including the Serverless Function we just created. 
+
+
+<img src="https://github.com/robfatland/serverless/blob/main/azure/images/16_4_Resource_Group_Overview.png" alt="drawing" width="600"/>
 
 
 This concludes the creation of an Azure Function using the Azure portal. 
