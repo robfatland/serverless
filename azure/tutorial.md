@@ -2,7 +2,6 @@
 
 ## Links
 
-
 - Serverless design pattern 
 - The [Azure Portal](https://portal.azure.com)
 - Installing [VSCode](https://code.visualstudio.com/)
@@ -12,7 +11,6 @@
 - [Microsoft Azure Functions general structure](https://docs.microsoft.com/en-us/azure/azure-functions/functions-reference)
 - [Microsoft Azure Functions specifically with Python](https://docs.microsoft.com/en-us/azure/azure-functions/functions-reference-python)
 - [What Azure Functions cost](https://azure.microsoft.com/en-us/pricing/details/functions/)
-
 - [Appendices](#appendices) at the bottom of this walk-through
 - [Appendix: Containers, specifically Docker](#docker-for-the-uninitiated)
 - [Appendix: Containers and Linux (WSL 2) on Windows](#understanding-docker-in-relation-to-wsl-2) 
@@ -34,15 +32,14 @@
 ***Why Azure? Why Serverless?***
 
 
-* Azure: One of four big clouds. Many well-designed, proven features.
-* If you are somewhere in the vicinity of ‘code-writing data scientist’: Azure has a great integrated environment that makes you super productive.
-* A good term to learn is infrastructure: the scaffolding of a computing system… 
-    * (Folks who think the infrastructure is the interesting stuff are your friends!)
-* For a business: Put a Service on the web! Now you can make this using Serverless technology. It will automatically scale up (makes copies of itself) to meet customer demand. "Nobody ever had a bad waiting experience using your Service. Five stars for you!"
-* There are many (free) resources on the web to help you learn Serverless
+* Azure: One of four big clouds, many well-designed, proven features
+* Azure has a great integrated environment that helps with being productive
+* Useful term: Infrastructure: the scaffolding of a computing system
+* Serverless technology automatically scales up (makes copies of itself) to meet demand
 
 
-***Facets of this topic to name-drop***
+***Facets of this topic***
+
 
 * An Azure Function has a number of moving parts: Storage account, code base, configuration files, ...
 * __init__.py is *recipe*. Don't change it unless you know how. 
