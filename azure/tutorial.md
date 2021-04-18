@@ -465,7 +465,7 @@ In summary...
 
 
 * We added one Python code file that has an integer factoring function
-* We modified the main program in a couple of ways
+* We modified the main program `__init__.py` in a couple of ways
     * Import the factor_integer() function from the first file
     * Simplify checking for an integer to factor (the `n` parameter)
     * If a good integer is received: Factor it and format the results as a text string; and return that
@@ -476,15 +476,34 @@ In summary...
 
 Make sure the lower-central tabbed console is open (ctrl + j). Select the TERMINAL tab.
 Use the **Run** menu or **F5** to debug the program. This will provide a test URL on `localhost`
-as shown in the larger red rectangle below. Ctrl+click on this link. 
+as shown in the larger red rectangle below. 
 
-
+<BR>
+   
 <img src="https://github.com/robfatland/serverless/blob/main/azure/images/27_1_VSCode_test_Azure_Function_localhost.png" alt="drawing" width="800"/>
 
+<BR>
+   
+Notice that the Activity Bar context switches from Azure to Debugging. 
 
-This should open a browser tab where the "thanks for playing" message will be printed. 
-As an integer was not provided, nothing was factored. To test the factor function append `?n=15` to the 
-URL in the browser address bar. 
+
+Ctrl+click on the localhost link **`http://localhost:7071/api/azfn1`**. The term `localhost` refers to your
+own computer; so this causes your browser to go to port 7071 on your own computer. This port has been associated
+with your Azure Function; so it is triggered. The Python code runs; and because it was not provided with an integer 
+to factor it prints the error message `Results: No n parameter, no silk purse for you!`. 
+
+
+This is an example of using a browser to interact with a web service. 
+
+
+Let's modify the URL by adding an integer to factor and see how this changes the results.
+In your browser address bar change the URL to `http://localhost:7071/api/azfn1?n=56` and hit enter.
+This re-triggers the Azure Function (which again, to emphasize, is running locally on your
+Development Machine, not on Azure). This time with a number to factor you should get back
+the prime factorization of 56. 
+
+
+
 
 
 Notice the **Run / bug** icon in the activity bar displays a blue badge.
