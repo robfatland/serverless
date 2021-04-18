@@ -539,25 +539,29 @@ icon. As before: Hover on **FUNCTIONS** in the sidebar to illuminate the deploym
 <img src="https://github.com/robfatland/serverless/blob/main/azure/images/29_1_VSCode_deploy_button.png" alt="drawing" width="400"/>
 
 
-Prompts during upload:
+This image shows the sequence of deployment prompts.
 
-- Name the Azure Function something unique to you that includes `azfn1`
-- Python environment: 3.8
-- Region: US West
-
-
-While this Azure Function deploys on the Azure cloud the lower console directs your attention to the **OUTPUT** tab.  
-Here, once the deployment is completed, the new Function is provided as a URL on *azurewebsites.net*. Ctrl + click and test as you
-did above on the localhost version: The Azure Function you developed locally is now running on the Azure cloud. 
 
 
 <BR><BR>
    
-<img src="https://github.com/robfatland/serverless/blob/main/azure/images/30_1_VSCode_Azure_Function_Deployment_Dialogs.png" alt="drawing" width="400"/>
+<img src="https://github.com/robfatland/serverless/blob/main/azure/images/30_1_VSCode_Azure_Function_Deployment_Dialogs.png" alt="drawing" width="800"/>
 
 <BR>
 
+While the Azure Function deploys on the Azure cloud the lower console directs your attention to the **OUTPUT** tab.  
+The URL of this new Azure Function appears here as a URL on *azurewebsites.net*. 
+
+
+We can return to the Azure portal to see the Azure Function listed in the default Resource Group.
+
+<BR>
+   
 <img src="https://github.com/robfatland/serverless/blob/main/azure/images/30_2_Default_Resource_Group_shows_Azure_Function.png" alt="drawing" width="800"/>
+
+<BR>
+
+As we did locally we can test the Azure Function using the URL in a browser address bar.
 
 <BR>
    
