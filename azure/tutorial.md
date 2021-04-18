@@ -487,7 +487,7 @@ as shown in the larger red rectangle below.
 Notice that the Activity Bar context switches from Azure to Debugging. 
 
 
-Ctrl+click on the localhost link **`http://localhost:7071/api/azfn1`**. The term `localhost` refers to your
+Ctrl+click on the localhost link `http://localhost:7071/api/azfn1`. The term `localhost` refers to your
 own computer; so this causes your browser to go to port 7071 on your own computer. This port has been associated
 with your Azure Function; so it is triggered. The Python code runs; and because it was not provided with an integer 
 to factor it prints the error message `Results: No n parameter, no silk purse for you!`. 
@@ -503,9 +503,6 @@ Development Machine, not on Azure). This time with a number to factor you should
 the prime factorization of 56. 
 
 
-
-
-
 Notice the **Run / bug** icon in the activity bar displays a blue badge.
 This indicates the Azure Function process is running locally.
 Stop the Function, clear the badge.
@@ -517,15 +514,15 @@ Stop the Function, clear the badge.
 It remains to click the *Deploy to Azure* button and choose where the deployment goes. From the 
 [activity bar](#prefatory-on-vscode) 
 select the Azure
-icon. As before: Hover on **FUNCTIONS** in the sidebar to illuminate the deployment / up-arrow icon. It is circled in white here:
+icon. As before: Hover on **FUNCTIONS** in the sidebar to illuminate the deployment / up-arrow icon. It is circled here:
 
 
 <img src="https://github.com/robfatland/serverless/blob/main/azure/images/29_1_VSCode_deploy_button.png" alt="drawing" width="400"/>
 
 
 Note that while this Azure Function is deploying to the Azure cloud, the lower console directs your attention to the **OUTPUT** tab.  
-Here, once the deployment is completed, the new Function is provided as a URL on *azurewebsites.net*. Ctrl + click and test as before
-with the local version. 
+Here, once the deployment is completed, the new Function is provided as a URL on *azurewebsites.net*. Ctrl + click and test as you
+did above on the localhost version: The Azure Function you developed locally is now running on the Azure cloud. 
 
 
 <img src="https://github.com/robfatland/serverless/blob/main/azure/images/30_1_VSCode_successful_deployment_to_Azure.png" alt="drawing" width="400"/>
