@@ -576,17 +576,38 @@ If this works as planned we have completed coding, testing, deploying and execut
 ## 10 Programmatic test
 
 
-The last thing we want to do is to automate the Azure Function trigger. That is: Place the trigger action inside of a Client Python program.
+The last step returns to the theme of automation. Specifically let's execute the Azure Function trigger from Python 
+(rather than in a browser address bar by hand). You can do this as a short three-line Python program but since
+Python is an interpretive language we can also enter these three lines of code on the Python prompt.
 
 
-Ensure that the Python `requests` library is installed in your environment. Run this simple program intended to get
-the factorization of 144:
+Ensure that the Python `requests` library is installed in your environment. 
+The command to install is `python -m pip install requests`. 
+This simple program requests the factorization of 144. Note that the URL
+is the base URL as shown above with the parameter string appended.
 
 
 ```
 import requests
-urlbase='https://azfn1.azurewebsites.net/api/azfn1'
+urlbase='https://rob5-azure-function-test.azurewebsites.net/api/azfn1'
 print(requests.get(urlbase + '?n=144').text)
+```
+
+Again this can be entered on the Python command line, for example:
+
+```
+prompt> python
+
+Python 3.8.6 (tags/v3.8.6:db45529, Sep 23 2020, 15:52:53) [MSC v.1927 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+
+>>> import requests
+>>> urlbase='https://rob5-azure-function-test.azurewebsites.net/api/azfn1'
+>>> print(requests.get(urlbase + '?n=144').text)
+
+Results: 144 has 6 factors, is = 2 * 2 * 2 * 2 * 3 * 3 ... thanks for playing!
+
+>>> 
 ```
 
 This completes the construction and testing of a simple serverless computation service. The first million
