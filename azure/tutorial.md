@@ -320,7 +320,6 @@ your Development System.
 
 
 * Verify you have Python 3.8+ 64-bit installed on your development system: `python --version`
-    * This avoids a swamp of problems
 * Update `pip` using the command `python -m pip install --upgrade pip`
 * Install the Python **requests** package:  `python -m pip install requests`
     * This enables a Python program to talk to a website
@@ -431,7 +430,7 @@ The plan for this code is to receive an integer labeled `n` and return its prime
 initiated by the Azure Function trigger; which we selected above to be an HTTP message. 
 
 
-In the same folder as `__init__.py` create a code file called `factor.py`. Do this by hovering over the **AZFN1** bar in
+In the same folder as `__init__.py` create a code file called `factors.py`. Do this by hovering over the **AZFN1** bar in
 the explorer and selecting the **`+New File`** icon. Put this block of code in the file:  
 
 
@@ -459,7 +458,7 @@ Next: Modify the file `__init__.py` to read as follows. (Notice the leading peri
 ```
 import logging
 import azure.functions as func
-from .factoring_code import factor_integer
+from .factors import factor_integer
 
 def main(req: func.HttpRequest) -> func.HttpResponse:
 
@@ -552,14 +551,20 @@ Here, once the deployment is completed, the new Function is provided as a URL on
 did above on the localhost version: The Azure Function you developed locally is now running on the Azure cloud. 
 
 
-<img src="https://github.com/robfatland/serverless/blob/main/azure/images/30_1_VSCode_successful_deployment_to_Azure.png" alt="drawing" width="400"/>
+<BR><BR>
+   
+<img src="https://github.com/robfatland/serverless/blob/main/azure/images/30_1_VSCode_Azure_Function_Deployment_Dialogs.png.png" alt="drawing" width="400"/>
+
+<BR>
+
+<img src="https://github.com/robfatland/serverless/blob/main/azure/images/30_2_Default_Resource_Group_shows_Azure_Function.png" alt="drawing" width="800"/>
+
+<BR>
+   
+<img src="https://github.com/robfatland/serverless/blob/main/azure/images/30_3_VSCode_Deployment_Output_And_Two_Browser_Tests.png" alt="drawing" width="800"/>
 
 
-Here is an example test result:
-
-
-<img src="https://github.com/robfatland/serverless/blob/main/azure/images/30_2_VSCode_browser_test_Azure_Function.png" alt="drawing" width="800"/>
-
+<BR><BR>
 
 If this works as planned we have completed coding, testing, deploying and executing the Azure Function on the Azure cloud. 
 
