@@ -8,12 +8,14 @@
 - Installing [VSCode](https://code.visualstudio.com/)
 - Installing the [Azure Functions Core Tools Extension in VSCode](https://github.com/Azure/azure-functions-core-tools#installing)
 - Skip to [Section 4](#4-switching-to-visual-studio-code) (this skips over the Azure Portal work)
-- [Microsoft on Azure Functions](https://docs.microsoft.com/en-us/azure/azure-functions/functions-reference)
-- [Microsoft on Azure Functions with Python](https://docs.microsoft.com/en-us/azure/azure-functions/functions-reference-python)
+- [Microsoft Azure Functions overview](https://docs.microsoft.com/en-us/azure/azure-functions/functions-overview)
+- [Microsoft Azure Functions general structure](https://docs.microsoft.com/en-us/azure/azure-functions/functions-reference)
+- [Microsoft Azure Functions specifically with Python](https://docs.microsoft.com/en-us/azure/azure-functions/functions-reference-python)
 - [What Azure Functions cost](https://azure.microsoft.com/en-us/pricing/details/functions/)
+
 - [Appendices](#appendices) at the bottom of this walk-through
-- [Appendix on Docker containers](#docker-for-the-uninitiated)
-- A [remark on WSL 2 for running containers on Windows](#understanding-docker-in-relation-to-wsl-2) 
+- [Appendix: Containers, specifically Docker](#docker-for-the-uninitiated)
+- [Appendix: Containers and Linux (WSL 2) on Windows](#understanding-docker-in-relation-to-wsl-2) 
 
 
 
@@ -586,7 +588,60 @@ available online.
 
 ## Appendices
 
+### Longer Overview of Serverless computing and Azure Serverless Functions
+
+Our goal here is to create an Azure Function, an online service that factors an integer (for example). 
+As no Virtual Machine is explicitly involved in this process the result is called a 'serverless function'.
+This suggests visualizing clouds like Azure as programmable computers.
+
+
+In building research computing machinery ('infrastructure') we have options for degree of effort, cost, 
+and types of interactivity with the end result. 'Serverless' is on the simple-cheap-not-very-interactive end 
+of this spectrum. Serverless does away with an 'underlying computer' so it is correspondingly at the simple
+end of the task pool. Serverless functions often exist as public endpoints, as 'URLs on the internet'.
+That is, they can be used by collaborators or by scientists we do not know. 
+
+
+If a serverless function on Azure is not built "on some virtual machine on the cloud"... where *do* we build it? 
+Starting on a laptop or a desktop connected to the internet: We will describe two courses of action.  
+First we use a browser to connect to a ***Cloud Portal*** which is a rather complicated interface to 
+"everything" on that cloud.  Second we install an Integrated Development Environment, that is an application
+that allows us to (a) build and test the Azure Function locally and (b) deploy it to the cloud where 
+it 'lives and operates' on demand. This IDE is called Visual Studio Code, abbreviated VSCode.
+It is available for PC, Mac and Linux operating systems at no cost.  
+
+
+#### Triggers
+
+A serverless function has a trigger: Something happens to make it run. This might be an alarm clock set 
+up as a trigger. It can be a new data file arriving in a storage location, again pre-configured to act as a 
+trigger. In this walk-through the trigger is an HTTP request. 
+
+
+Let's break down the trigger event as two appended strings that are entered into a browser address bar. 
+The first string is the URL of the Azure Function. This we are handed in the process of deploying our 
+Function. The second string is a list of parameters, in our case just one parameter, that can be parsed
+by the Azure Function. Here is the breakdown:
+
+```
+URL of the Azure Function is (for example): https://111.22.33.44
+
+Parameter string to pass an integer 'n' with value 105: ?n=105
+
+Two strings appended together, to place in browser address bar: https://111.22.33.44?n=105
+```
+
+In practice rather than an ip address like `111.22.33.44` we receive a more human-friendly URL
+for our Azure function such as `https://factoring.azurewebsites.net/api/factoring`. 
+On the cloud the trigger passes the parameter to the code we have emplaced. For this
+code we use Python 3 split across two source code files. 
+
+
 ### Docker for the uninitiated
+
+While this walk-through is for Azure Functions these remarks are a short review of some key concepts
+in containerization. 
+
 
 - [Windows installation](https://docs.docker.com/docker-for-windows/install/)
 - Download the installer, run through the installation, start the Docker app (this takes some time)
