@@ -54,15 +54,8 @@
 * On HTTP triggers: GET and POST are distinct *types*. Example code has “body parse” component; see the Appendix
 * Where can results go? HTTP response, a new file in a Storage Account; or a line appended to an existing file; or a new entry in a database table
 * More security: Private environment variables; key vault; etc: How to get code to GitHub safely?
+* Debugging: Where does `logging.info` go?
 
-
-# Still to do
-
-
-- Consolidate lecture component into deck
-- use requests
-- printf debug statement: where does it go?
-- close the loop: Go back into Azure Portal and do the forensics
 
 
 ## Overview
