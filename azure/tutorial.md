@@ -431,7 +431,7 @@ The plan for this code is to receive an integer labeled `n` and return its prime
 initiated by the Azure Function trigger; which we selected above to be an HTTP message. 
 
 
-In the same folder as `__init__.py` create a code file called `factoring_code.py`. Do this by hovering over the **AZFN1** bar in
+In the same folder as `__init__.py` create a code file called `factor.py`. Do this by hovering over the **AZFN1** bar in
 the explorer and selecting the **`+New File`** icon. Put this block of code in the file:  
 
 
@@ -451,7 +451,10 @@ def factor_integer(n):
     return prime_factors
 ```
 
-Modify the file `__init__.py` to read as follows. (Notice the leading period `.` in the import statement for the factoring code.)
+Be sure to save this file. 
+
+
+Next: Modify the file `__init__.py` to read as follows. (Notice the leading period `.` in the import statement for the factoring code.)
 
 ```
 import logging
@@ -460,9 +463,9 @@ from .factoring_code import factor_integer
 
 def main(req: func.HttpRequest) -> func.HttpResponse:
 
-    logging.info('Python HTTP trigger function processed a request')
+    logging.info('Python HTTP trigger function azfn1 processed a request, hurray')
     n = req.params.get('n')
-    if not n: reply_string = 'Results: No n parameter, no silk purse for you!'
+    if not n: reply_string = 'Results: No n parameter, no factors for you!!!'
     else:                                         # runs if 'n' was found (will be of type string)
         factor_list = factor_integer(int(n))      # gets a list of factors
         factor_string = ' * '.join([str(f) for f in factor_list])
@@ -472,18 +475,20 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
     return func.HttpResponse(reply_string, status_code = 200)
 ```
 
+Be sure to save this file.
 
-Notice the main program was modified to look for a parameter `n` passed in the HTTP trigger request. 
+
+Notice the original default program was modified to look for a parameter `n`. This is passed to the Function in the HTTP trigger request. 
 
 
 In summary...
 
 
-* We added one Python code file that has an integer factoring function
+* We added one Python code file `factor.py` that has an integer factoring function
 * We modified the main program `__init__.py` in a couple of ways
     * Import the factor_integer() function from the first file
     * Simplify checking for an integer to factor (the `n` parameter)
-    * If a good integer is received: Factor it and format the results as a text string; and return that
+    * If a good integer is received: Factor it and return the results as a text string
 
 
 ## 8 Test locally
@@ -505,7 +510,7 @@ Notice that the Activity Bar context switches from Azure to Debugging.
 Ctrl+click on the localhost link `http://localhost:7071/api/azfn1`. The term `localhost` refers to your
 own computer; so this causes your browser to go to port 7071 on your own computer. This port has been associated
 with your Azure Function; so it is triggered. The Python code runs; and because it was not provided with an integer 
-to factor it prints the error message `Results: No n parameter, no silk purse for you!`. 
+to factor it prints the error message `Results: No n parameter, no factors for you!!!`. 
 
 
 This is an example of using a browser to interact with a web service. 
