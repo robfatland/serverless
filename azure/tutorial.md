@@ -303,24 +303,25 @@ your Development System.
 ## 5 Installing extensions, Python, and so forth
 
 
-* Make sure you have Python 3.8+ 64-bit installed on your development system. 
-    * This avoids a miasma of inexplicable *does not work* outcomes.
-    * Ensure also that your PATH environment variable is set to run this version of Python
-* You can update `pip` using the command `python -m pip install --upgrade pip`
-* Install the Python `requests` package
-    * `python -m pip install requests`
-* Install *Azure Core Tools* *from within* VSCode 
-    * See [this webpage](https://github.com/Azure/azure-functions-core-tools#installing)
-    * This introduces using the Action Bar in VSCode: Vertical icon bar at far left
-
-
-
-Note: If you are working
-in a pre-built environment such as a Docker container: These things may already be installed. 
-
+* Verify you have Python 3.8+ 64-bit installed on your development system: `python --version`
+    * This avoids a swamp of problems
+* Update `pip` using the command `python -m pip install --upgrade pip`
+* Install the Python **requests** package:  `python -m pip install requests`
+    * This enables a Python program to talk to a website
+    * More accurately: The Python program can send and receive HyperText Transfer Protocol (HTTP) messages 
+* Start ***VSCode*** and sign in to Azure
+    * On the Terminal type `az login`: This should launch NetID authentication
+    * Verify: Click the Azure icon on the Activity Bar (stylized **A**) and check the status bar (bottom)
+* Install *Azure Functions Core Tools* 
+    * Do this *from within* VSCode
+        * On the VSCode Activity Bar, the vertical icon bar at the far left
+        * Click the Extensions icon (4 small boxes icon)
+        * Search for Azure Functions Core Tools
+    * Alternative method: Use [this URL](https://github.com/Azure/azure-functions-core-tools#installing)
 
 
 ## 6 Creating an Azure Function in VSCode
+
 
 ### Prefatory on VSCode
 
@@ -331,7 +332,7 @@ VSCode starts with a tabbed Welcome page that you can dismiss. Doing so reveals 
 The VSCode console layout includes an **Activity Bar** at the extreme left (a vertical sequence of icons) and a **Sidebar**
 adjacent to this. Your **Activity Bar** selection will determine the dropdowns and options that appear in the **Sidebar**.
 At the bottom of the VSCode console is a status bar. This will include your sign-in status. If you see 
-*Azure:yourusername@yourdomain* you are signed in. 
+*Azure:yourusername@yourdomain* (with the *Azure* icon selected in the Activity Bar) then you are signed in. 
 
 
 With VSCode running use ctrl + j to bring up a tabbed console in the lower part of the IDE. This acts as a kind of control
@@ -348,11 +349,12 @@ looking at the status bar at bottom of the console.
 To engage with the Azure cloud and Azure Functions using VSCode: Click the A-like or tent-like Azure icon in the activity bar.
 It looks like this: 
 
-
+<BR>
 
 <img src="https://github.com/robfatland/serverless/blob/main/azure/images/22_1_VSCode_Azure_tent_icon.png" alt="drawing" width="80"/>
 
-
+<BR>
+   
 ### Preparing to code the Azure Function
 
 
@@ -361,35 +363,46 @@ own computer. To start this process: First select the Azure context as described
 in the menu strip. This is also on the left side of the IDE, adjacent to the symbol strip at the far left. This hover action 
 should bring up a *Create new project...* icon, a folder with a lightning bolt that looks like this:
 
-
+<BR>
+   
 <img src="https://github.com/robfatland/serverless/blob/main/azure/images/22_2_VSCode_new_project_folder_icon.png" alt="drawing" width="80"/>
 
+<BR>
+   
 
 Create the host folder and make the following choices to configure the project: 
 
-
+<BR>
+   
 <img src="https://github.com/robfatland/serverless/blob/main/azure/images/23_1_VSCode_config_wizard.png" alt="drawing" width="600"/>
 
+<BR>
+   
 
 This will configure an environment to match these choices and create the project; takes a couple minutes.
 
 
 Activate the explorer by clicking the double page icon at the top of the activity bar. You should see an item corresponding to your new project. Expand this view.
 
+<BR>
+   
 
 <img src="https://github.com/robfatland/serverless/blob/main/azure/images/24_1_VSCode_Azure_Function_file_explorer.png" alt="drawing" width="200"/>
 
+<BR>
+   
 
-The `requirements.txt` file describes packages that are installed in a Python virtual environment for the Azure Function to run.
+Click on the `requirements.txt` file to see its contents. This file describes packages that are installed in a Python virtual environment 
+for the Azure Function to run. A Python virtual environment is essentially a refined or 'value added' version of the basic Python environment. 
 
 
 <img src="https://github.com/robfatland/serverless/blob/main/azure/images/24_2_VSCode_requirements_dot_txt.png" alt="drawing" width="800"/>
 
 
 Related: The file `pyvenv.cfg` describes the local Python executable path and version. Above in part 5 we
-mentioned to ensure you have Python 3.8+ 64-bit installed. This is a good opportunity to double check: 
+made sure to have Python 3.8+ 64-bit installed. 
 The Python executable referenced in the `home` variable assignment in the `pyvenv.cfg` file should in fact 
-be this version of Python. Also be certain that your PATH environment variable is set properly to refer to this executable.
+be this version of Python. 
 
 
 <img src="https://github.com/robfatland/serverless/blob/main/azure/images/25_1_VSCode_Python_virtual_environment_configuration.png" alt="drawing" width="800"/>
@@ -398,7 +411,13 @@ be this version of Python. Also be certain that your PATH environment variable i
 
 ## 7 Code break
 
-In the same location as `__init__.py` add a code file called `factoring_code.py` with these contents: 
+The VSCode Sidebar provides us with a navigator for our Azure Function called `azfn`. Let's create some code in this folder.
+The plan for this code is to receive an integer labeled `n` and return its prime factorization as a string. This process is
+initiated by the Azure Function trigger; which we selected above to be an HTTP message. 
+
+
+In the same folder as `__init__.py` create a code file called `factoring_code.py`. Do this by hovering over the **AZFN1** bar in
+the explorer and selecting the **`+New File`** icon. Put this block of code in the file:  
 
 
 ```
@@ -438,9 +457,18 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
     return func.HttpResponse(reply_string, status_code = 200)
 ```
 
-In summary: We do not make any configuration changes to the default Azure Function. We did add an additional Python code file
-and we imported its sole function into the main program. The main program was also modified to look for a parameter `n` 
-passed in the HTTP trigger request. 
+
+Notice the main program was modified to look for a parameter `n` passed in the HTTP trigger request. 
+
+
+In summary...
+
+
+* We added one Python code file that has an integer factoring function
+* We modified the main program in a couple of ways
+    * Import the factor_integer() function from the first file
+    * Simplify checking for an integer to factor (the `n` parameter)
+    * If a good integer is received: Factor it and format the results as a text string; and return that
 
 
 ## 8 Test locally
