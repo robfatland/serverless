@@ -553,7 +553,7 @@ did above on the localhost version: The Azure Function you developed locally is 
 
 <BR><BR>
    
-<img src="https://github.com/robfatland/serverless/blob/main/azure/images/30_1_VSCode_Azure_Function_Deployment_Dialogs.png.png" alt="drawing" width="400"/>
+<img src="https://github.com/robfatland/serverless/blob/main/azure/images/30_1_VSCode_Azure_Function_Deployment_Dialogs.png" alt="drawing" width="400"/>
 
 <BR>
 
