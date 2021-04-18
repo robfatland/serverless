@@ -1,24 +1,32 @@
 # Azure Functions for scientists and students: A walkthrough
 
-## Construction notes
+## Links
 
 
-Need to factor in; [Appendices](#appendices) maybe?
-### Before we get started...
+- Serverless design pattern 
+- The [Azure Portal](https://portal.azure.com)
+- Installing [VSCode](https://code.visualstudio.com/)
+- Installing the [Azure Functions Core Tools Extension in VSCode](https://github.com/Azure/azure-functions-core-tools#installing)
+- Skip to [Section 4](#4-switching-to-visual-studio-code) (this skips over the Azure Portal work)
+- [Microsoft on Azure Functions](https://docs.microsoft.com/en-us/azure/azure-functions/functions-reference)
+- [Microsoft on Azure Functions with Python](https://docs.microsoft.com/en-us/azure/azure-functions/functions-reference-python)
+- [What Azure Functions cost](https://azure.microsoft.com/en-us/pricing/details/functions/)
+- [Appendices](#appendices) at the bottom of this walk-through
+- [Appendix on Docker containers](#docker-for-the-uninitiated)
+- A [remark on WSL 2 for running containers on Windows](#understanding-docker-in-relation-to-wsl-2) 
 
-* [Appendices](#appendices)
-    * [Appendix on Docker containers](#docker-for-the-uninitiated)
-        * A [remark on WSL 2 for running containers on Windows](#understanding-docker-in-relation-to-wsl-2) 
 
 
 ***What are we doing? And why?***
 
 
-* Answer: We’re building an Azure version of a serverless function in Python 3 
+* Answer: We’re building an Azure version of a serverless function using Python 3 
 * Result: Testable URL + context: Building operational research code on the cloud, lightweight version
-* Consider this **S4** mnemonic: Azure Functions are **$cheap, serverless, secure and scalable**.
-* Cost: Free for the first 400TB / one million executions. 400TB of what???? (kilroy)
+* **S4** mnemonic: Azure Functions are **$cheap, serverless, secure, scalable**.
+* Cost: Free for the first 400TB / one million executions. (400TB of what????)
 * Serverless structure: Trigger → Code runs → Output
+* Optimization problem: How much do we need to learn to use Azure Functions effectively?
+* Why problem: What are Azure Functions good for? 
 
 
 ***Why Azure? Why Serverless?***
@@ -32,24 +40,27 @@ Need to factor in; [Appendices](#appendices) maybe?
 * There are many (free) resources on the web to help you learn Serverless
 
 
-***To Add List***
+***Facets of this topic to name-drop***
 
-* name all the moving parts of an (empty!) AF
-* printf(‘this is a debugging statement’) minimum viable debug nod
-* Do not break the recipe e.g. where __init__.py resides onless ye know
-* In VSCode: Can manipulate the layout in menu bar to isolate FUNCTIONS
-* AF wizard: Portal: Implications of Anonymous versus…
-* Add something to requirements.txt and use that in a simple manner
-* Could use more support for Window Python 3.8+ 64 PATH: How to set? Also diff between Path and PythonPath is what?
-* More on automation via “provide template”
-* On trigger: GET, POST and the example code has also the “body parse” > Appendix
-* Close the loop: Go back to Azure and identify AF + RG + SA for new AF
-* Give Output examples: an HTTP response, a new file stored in some particular spot (SA)
-* Think about / cover the import of private environment variables; and related: Rationale: How do we get our AF code on GitHub safely? There is already a lot of machinery in place in VSCode. 
-* More #foo and more chopping sections into sub-blocks
-* [Microsoft documentation part 1](https://docs.microsoft.com/en-us/azure/azure-functions/functions-reference)
-* [Microsoft documentation part 2](https://docs.microsoft.com/en-us/azure/azure-functions/functions-reference-python)
+* An Azure Function has a number of moving parts: Storage account, code base, configuration files, ...
+* __init__.py is *recipe*. Don't change it unless you know how. 
+* VSCode: Can modify the view, can use the Command Pallette, can move between Command shells (Power Shell, WSL, ...)
+* Security: For example: Azure Functions have *Anonymous* users versus higher security options
+* A subject unto itself: Python environments and configuration via `requirements.txt`
+* Windows Python 3.8+ 64-bit PATH, PYTHONPATH: Can be a challenge
+* Thematic: Templates and automation versus by-hand
+* On HTTP triggers: GET and POST are distinct *types*. Example code has “body parse” component; see the Appendix
+* Where can results go? HTTP response, a new file in a Storage Account; or a line appended to an existing file; or a new entry in a database table
+* More security: Private environment variables; key vault; etc: How to get code to GitHub safely?
 
+
+# Still to do
+
+
+- Consolidate lecture component into deck
+- use requests
+- printf debug statement: where does it go?
+- close the loop: Go back into Azure Portal and do the forensics
 
 
 ## Overview
