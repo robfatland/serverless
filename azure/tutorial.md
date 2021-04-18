@@ -2,7 +2,8 @@
 
 ## Links
 
-- Serverless design pattern 
+
+- [Serverless function design pattern introduction](https://www.twilio.com/docs/glossary/what-is-serverless-architecture)
 - The [Azure Portal](https://portal.azure.com)
 - Installing [VSCode](https://code.visualstudio.com/)
 - Installing the [Azure Functions Core Tools Extension in VSCode](https://github.com/Azure/azure-functions-core-tools#installing)
@@ -11,6 +12,7 @@
 - [Microsoft Azure Functions general structure](https://docs.microsoft.com/en-us/azure/azure-functions/functions-reference)
 - [Microsoft Azure Functions specifically with Python](https://docs.microsoft.com/en-us/azure/azure-functions/functions-reference-python)
 - [What Azure Functions cost](https://azure.microsoft.com/en-us/pricing/details/functions/)
+- [An interesting blog on using Serverless Functions for deep learning](https://www.serverless.com/blog/using-tensorflow-serverless-framework-deep-learning-image-recognition)
 - [Appendices](#appendices) at the bottom of this walk-through
 - [Appendix: Containers, specifically Docker](#docker-for-the-uninitiated)
 - [Appendix: Containers and Linux (WSL 2) on Windows](#understanding-docker-in-relation-to-wsl-2) 
