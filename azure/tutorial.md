@@ -34,12 +34,8 @@ Need to factor in; [Appendices](#appendices) maybe?
 
 ***To Add List***
 
-
-* Define a RG better
-* Could use a punchline to the portal segment beyond ‘yay it deployed’
 * name all the moving parts of an (empty!) AF
 * printf(‘this is a debugging statement’) minimum viable debug nod
-* 3 listed entities in the RG for the AF
 * Do not break the recipe e.g. where __init__.py resides onless ye know
 * In VSCode: Can manipulate the layout in menu bar to isolate FUNCTIONS
 * AF wizard: Portal: Implications of Anonymous versus…
@@ -64,9 +60,9 @@ Since we publish code with no contact with a virtual machine en route this kind 
 called 'serverless'. There is a server but we just don't worry about it at all.
 
 
-**A note on using the Azure portal**: Portal procedure is covered in part 2 of this walk-through. If for any reason you
-are not interested in working with and learning about the Azure portal you can do part *1*, 
-skip sections *2* and *3* and continue with 
+**A note on using the Azure portal**: Portal procedure is covered in part 2 of this walk-through. If you
+are not interested in working with and learning about the Azure portal you can 
+skip to 
 [*section 4*](#4-switching-to-visual-studio-code).
 
 
@@ -286,13 +282,21 @@ protocol called JavaScript Object Notation (JSON). This text can be used as a te
 to auto-generate Azure Functions, i.e. do this same task in an automated manner. 
 
 
-## 4 Switching to Visual Studio Code
+## 4 Switching to Visual Studio Code (VSCode)
+
+
+
 
 We now depart from the Azure portal in favor of a local development application 
-called Visual Studio Code, abbreviated VSCode. On the one hand looking at the Azure
-cloud through the portal gives a pretty undisguised view of the fact that cloud computing
+called Visual Studio Code, abbreviated VSCode. Looking at the Azure
+cloud through the portal illustrates that cloud computing
 comes with a lot of details. However it would be nice to work in a more streamlined
 environment without the profusion of detail; and that is just what VSCode is.
+
+
+An installer may be found at [https://code.visualstudio.com/](https://code.visualstudio.com/).
+Default installation on a PC is `C:\Users\myusername\AppData\Local\Programs\Microsoft VS Code`.
+Default installation adds VSCode to PATH (requires shell restart). 
 
 
 Install if necessary and start up the Visual Studio Code (VSCode) application on 
@@ -300,7 +304,7 @@ your Development System.
 
 
 
-## 5 Installing extensions, Python, and so forth
+## 5 Installing Python and Extensions
 
 
 * Verify you have Python 3.8+ 64-bit installed on your development system: `python --version`
@@ -313,11 +317,10 @@ your Development System.
     * On the Terminal type `az login`: This should launch NetID authentication
     * Verify: Click the Azure icon on the Activity Bar (stylized **A**) and check the status bar (bottom)
 * Install *Azure Functions Core Tools* 
-    * Do this *from within* VSCode
-        * On the VSCode Activity Bar, the vertical icon bar at the far left
-        * Click the Extensions icon (4 small boxes icon)
+    * Use [this URL](https://github.com/Azure/azure-functions-core-tools#installing)
+    * To see if it installed: From within VSCode
+        * Activity Bar (vertical icon bar at the far left) select Extensions icon
         * Search for Azure Functions Core Tools
-    * Alternative method: Use [this URL](https://github.com/Azure/azure-functions-core-tools#installing)
 
 
 ## 6 Creating an Azure Function in VSCode
