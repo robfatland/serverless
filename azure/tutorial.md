@@ -520,7 +520,14 @@ icon. As before: Hover on **FUNCTIONS** in the sidebar to illuminate the deploym
 <img src="https://github.com/robfatland/serverless/blob/main/azure/images/29_1_VSCode_deploy_button.png" alt="drawing" width="400"/>
 
 
-Note that while this Azure Function is deploying to the Azure cloud, the lower console directs your attention to the **OUTPUT** tab.  
+Prompts during upload:
+
+- Name the Azure Function something unique to you that includes `azfn1`
+- Python environment: 3.8
+- Region: US West
+
+
+While this Azure Function deploys on the Azure cloud the lower console directs your attention to the **OUTPUT** tab.  
 Here, once the deployment is completed, the new Function is provided as a URL on *azurewebsites.net*. Ctrl + click and test as you
 did above on the localhost version: The Azure Function you developed locally is now running on the Azure cloud. 
 
