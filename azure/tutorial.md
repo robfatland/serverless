@@ -17,6 +17,7 @@
 - [Appendices](#appendices) at the bottom of this walk-through
 - [Appendix: Containers, specifically Docker](#docker-for-the-uninitiated)
 - [Appendix: Containers and Linux (WSL 2) on Windows](#understanding-docker-in-relation-to-wsl-2)
+- [Stretch problem: Expanding an Azure Function](#stretch-problem)
 - [Code golf Sudoku solver blog by Jake VanDerplas](https://jakevdp.github.io/blog/2013/04/15/code-golf-in-python-sudoku/) 
 
 
