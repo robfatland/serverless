@@ -16,7 +16,8 @@
 - [An interesting blog on using Serverless Functions for deep learning](https://www.serverless.com/blog/using-tensorflow-serverless-framework-deep-learning-image-recognition)
 - [Appendices](#appendices) at the bottom of this walk-through
 - [Appendix: Containers, specifically Docker](#docker-for-the-uninitiated)
-- [Appendix: Containers and Linux (WSL 2) on Windows](#understanding-docker-in-relation-to-wsl-2) 
+- [Appendix: Containers and Linux (WSL 2) on Windows](#understanding-docker-in-relation-to-wsl-2)
+- [Code golf Sudoku solver blog by Jake VanDerplas](https://jakevdp.github.io/blog/2013/04/15/code-golf-in-python-sudoku/) 
 
 
 
@@ -663,6 +664,63 @@ In practice rather than an ip address like `111.22.33.44` we receive a more huma
 for our Azure function such as `https://factoring.azurewebsites.net/api/factoring`. 
 On the cloud the trigger passes the parameter to the code we have emplaced. For this
 code we use Python 3 split across two source code files. 
+
+### Stretch Problem
+
+The code given below was developed by Jake VanDerplas in a 
+[blog about minimizing code](https://jakevdp.github.io/blog/2013/04/15/code-golf-in-python-sudoku/). 
+
+
+```
+def sudoku_solver(p):
+    i = p.find('0')
+    if i < 0: yield p
+    else:
+        for v in set('123456789')-set(p[j] for j in range(81)
+                                      if (i%9==j%9) or (i//9==j//9)
+                                      or (i//27==j//27 and i%9//3==j%9//3)):
+            for s in sudoku_solver(p[:i]+v+p[i+1:]):
+                yield s
+```
+
+This is Python that accepts an 81-character string as input. This
+string is treated as a Sudoku puzzle to be solved. Each known value is a numeral from 1 to 9. An
+open / unsolved value is a '0'. Here is an example puzzle: 
+
+```
+027800061040030008910005420500016030000970200070000096700000080006027000030480007
+```
+
+
+The solution is derived by dint of brute force guessing. The result is a Generator that
+yields up all the solutions the solver can find. Each solution is also an 81-character
+string. The two solutions to the above puzzle are 
+
+
+```
+327894561645132978918765423589216734463978215172543896794651382856327149231489657
+327894561645132978918765423589216734463978215271543896794651382856327149132489657
+```
+
+<BR>
+   
+***Challenge***: Augment your Azure Function so that it can *either* factor an integer *or* 
+solve a Sudoku puzzle. Here is an outline of the details:
+
+- Add the above function to the code base
+- Change the parsing logic in `__init__.py` to look for...
+    - a parameter key `n`...
+    - ...or failing that a parameter key `s`
+        - expect the n-key value to be an integer to factor, as before
+        - expect the s-key value to be an 81-character string representing a Sudoku puzzle
+
+<BR> 
+
+If the Azure Function is handed a number to factor: We get back the prime factorization.
+If the Azure Function is given a Sudoku puzzle: We get back some solutions if they can be found. 
+
+
+
 
 
 ### Docker for the uninitiated
