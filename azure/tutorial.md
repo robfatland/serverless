@@ -10,6 +10,7 @@
 - The [Azure Portal](https://portal.azure.com)
 - Installing [VSCode](https://code.visualstudio.com/)
 - Installing the [Azure Functions Core Tools Extension in VSCode](https://github.com/Azure/azure-functions-core-tools#installing)
+- Installing [.Net Core](https://dotnet.microsoft.com/download) may help with VSCode on a Mac
 - Skip to [Section 4](#4-switching-to-visual-studio-code) (this skips over the Azure Portal work)
 - [Microsoft Azure Functions overview](https://docs.microsoft.com/en-us/azure/azure-functions/functions-overview)
 - [Microsoft Azure Functions general structure](https://docs.microsoft.com/en-us/azure/azure-functions/functions-reference)
@@ -330,6 +331,7 @@ your Development System.
     * To see if it installed: From within VSCode
         * Activity Bar (vertical icon bar at the far left) select Extensions icon
         * Search for Azure Functions Core Tools
+    * Mac Users: It may be helpful to [install **.Net Core**](https://dotnet.microsoft.com/download)
 
 
 ## 6 Creating an Azure Function in VSCode
