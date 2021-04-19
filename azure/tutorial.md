@@ -19,7 +19,7 @@
 - [Appendix: Containers and Linux (WSL 2) on Windows](#understanding-docker-in-relation-to-wsl-2)
 - [Stretch problem: Expanding an Azure Function](#stretch-problem)
 - [Code golf Sudoku solver blog by Jake VanDerplas](https://jakevdp.github.io/blog/2013/04/15/code-golf-in-python-sudoku/) 
-
+- [Rustem Feyzkhanov's GitHub Lambda (AWS Serverless) adaptations library](https://github.com/ryfeus/lambda-packs)
 
 
 ***What are we doing? And why?***
