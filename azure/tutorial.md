@@ -5,6 +5,7 @@
 
 - [Serverless function design pattern introduction](https://www.twilio.com/docs/glossary/what-is-serverless-architecture)
 - [Presentation slides](https://docs.google.com/presentation/d/1R2HHfHYgmarje2q_0x42hMecUc7R6SFjI-ih1L05foQ/edit#slide=id.p)
+- [Padlet for communications](https://padlet.com/robfatland/serverless)
 - The [Azure Portal](https://portal.azure.com)
 - Installing [VSCode](https://code.visualstudio.com/)
 - Installing the [Azure Functions Core Tools Extension in VSCode](https://github.com/Azure/azure-functions-core-tools#installing)
