@@ -824,7 +824,17 @@ If the Azure Function is given a Sudoku puzzle: We get back some solutions if th
 
 ### Stretch Problem 3
 
--- does not exist just yet --
+Add a binding to an Azure Storage Account and create a very simple access example. For example
+you might place a 3-value CSV file in the Storage Account and use a Azure Function parameter `i`
+to choose one of those values: 
+
+```
+1, banana
+2, apple
+3, orange
+```
+
+Then test with `<baseurl>?i=2` and receive the reply `apple`.
 
 
 ### Docker review
