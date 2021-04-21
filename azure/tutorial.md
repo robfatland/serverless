@@ -20,7 +20,9 @@
 - [Appendices](#appendices) at the bottom of this walk-through
 - [Appendix: Containers, specifically Docker](#docker-for-the-uninitiated)
 - [Appendix: Containers and Linux (WSL 2) on Windows](#understanding-docker-in-relation-to-wsl-2)
-- [Stretch problem: Expanding an Azure Function](#stretch-problem)
+- [Stretch problem: Timing an Azure Function](#stretch-problem-1)
+- [Stretch problem: Expanding an Azure Function](#stretch-problem-2)
+- [Stretch problem: Binding an Azure Function](#stretch-problem-3)
 - [Code golf Sudoku solver blog by Jake VanDerplas](https://jakevdp.github.io/blog/2013/04/15/code-golf-in-python-sudoku/) 
 - [Rustem Feyzkhanov's GitHub Lambda (AWS Serverless) adaptations library](https://github.com/ryfeus/lambda-packs)
 
@@ -710,17 +712,46 @@ by looking at the output in the TERMINAL window.
 
 Modify the program to run 20 Azure Function calls and print the average time required per call.
 
-- Add the line `import time` at the top of the file
+- Add the line **`import time`** at the top of the file
+    - This provides you with a timing library
 - Delete the print statement (line 3 of the original program)
-- Add the following code blocks
+- Add code to run the Azure Function 20 times and determine the average time per call
+    - The following code blocks can be added in sequence to accomplish this
 
-**Block 1**
+
+*Block 1*
 ```
 toc = time.time()
 responses = ''
 a = 1
 b = 21
- 
+```
+
+This sets up the parameters to run the Azure Function 20 times and notes the time. 
+
+
+*Block 2*
+```
+for i in range(a, b):
+    this_response = requests.get(urlbase + '?n=' + str(i)).text
+    reduced_response = this_response.replace("playing!", "").replace("for","").replace("thanks","")
+    responses += reduced_response.replace("...","") + '\n'    
+```
+
+This loop calls the Azure Function 20 times and gets rid of the "... thanks for playing!" message.
+
+
+*Block 3*
+
+```
+tic = time.time()
+elapsed_time = tic - toc
+print(responses)
+print("time per factorization = " + str(elapsed_time / (b-a)))
+```
+
+This notes the time again, creates a time difference and prints the average time per Azure Function call.
+
 
 #### Step 3
 
