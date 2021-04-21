@@ -670,7 +670,72 @@ for our Azure function such as `https://factoring.azurewebsites.net/api/factorin
 On the cloud the trigger passes the parameter to the code we have emplaced. For this
 code we use Python 3 split across two source code files. 
 
-### Stretch Problem
+### Stretch Problem 1
+
+Goal: Get a sense of cloud serverless function time-per-task using VSCode as a test platform. 
+
+
+Step 1: Create a Client program that successfully calls the existing Azure Function
+Step 2: Modify this program to call the Azure Function multiple times, timing the results
+Step 3: Change the test parameters to determine what probably takes up the execution time
+
+#### Step 1
+
+Above we created an Azure Function
+to factor an integer (passing it parameter `n`). 
+The Python code used to test this was given as: 
+
+
+```
+import requests
+urlbase='https://rob5-azure-function-test.azurewebsites.net/api/azfn1'
+print(requests.get(urlbase + '?n=144').text)
+```
+
+This can be executed one at a time using the Python command prompt `>>>` or written
+into a Python program file, say named `azfunctionclient.py`. You may use VSCode for this
+where it is strongly encouraged that you save the file outside the Azure Function folder. 
+The procedure is to create a new file, paste in the above code, and save this file 
+*as type **Python*** in a new folder, again outside the folder containing the Azure function. 
+The reason for this is to keep your test client (that runs on your local machine) distinct from 
+code that goes into your Azure Function.
+
+
+Run the client program in VSCode using the 
+*run* button (green triangle) at the upper right. Verify that the program works properly
+by looking at the output in the TERMINAL window. 
+
+
+#### Step 2
+
+Modify the program to run 20 Azure Function calls and print the average time required per call.
+
+- Add the line `import time` at the top of the file
+- Delete the print statement (line 3 of the original program)
+- Add the following code blocks
+
+**Block 1**
+```
+toc = time.time()
+responses = ''
+a = 1
+b = 21
+ 
+
+#### Step 3
+
+If you change the range of parameters (1, 21) to much larger numbers, like (1000001, 1000021)
+you have presumably made the factoring challenge more time-consuming: The algorithm has more 
+work to do. However it is unclear what part of the Azure Function execution takes up how much 
+time: Is it the message passing that is time consuming? Or is it the factorization? Or some
+combination. 
+
+
+We can start to get a handle on this by changing the nature of the task to see if this has 
+a significant impact on the time elapsed. 
+
+
+### Stretch Problem 2
 
 The code given below was developed by Jake VanDerplas in a 
 [blog about minimizing code](https://jakevdp.github.io/blog/2013/04/15/code-golf-in-python-sudoku/). 
@@ -725,10 +790,12 @@ If the Azure Function is handed a number to factor: We get back the prime factor
 If the Azure Function is given a Sudoku puzzle: We get back some solutions if they can be found. 
 
 
+### Stretch Problem 3
+
+-- does not exist just yet --
 
 
-
-### Docker for the uninitiated
+### Docker review
 
 While this walk-through is for Azure Functions these remarks are a short review of some key concepts
 in containerization. 
@@ -783,4 +850,13 @@ From [this Docker Desktop page](https://docs.docker.com/docker-for-windows/wsl/)
 > to almost a minute in the previous version of Docker Desktop.
 
 
+### Stretch Problem 1 example results
+
+
+<BR>
+   
+<img src="https://github.com/robfatland/serverless/blob/main/azure/images/31_1_Python_Azure_Function_Client_Timing_Test.png" alt="drawing" width="900"/>
+
+
+<BR><BR>
 
