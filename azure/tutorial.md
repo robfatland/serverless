@@ -25,6 +25,7 @@
 - [Stretch problem: Binding an Azure Function](#stretch-problem-3)
 - [Code golf Sudoku solver blog by Jake VanDerplas](https://jakevdp.github.io/blog/2013/04/15/code-golf-in-python-sudoku/) 
 - [Rustem Feyzkhanov's GitHub Lambda (AWS Serverless) adaptations library](https://github.com/ryfeus/lambda-packs)
+- [YouTube video on Azure Function best practices (and more)](https://youtu.be/kvTostlJp7M)
 
 
 ***What are we doing? And why?***
