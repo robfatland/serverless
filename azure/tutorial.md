@@ -612,7 +612,7 @@ is the base URL as shown above with the parameter string appended.
 
 ```
 import requests
-urlbase='https://rob5-azure-function-test.azurewebsites.net/api/azfn1'
+urlbase='https://rob5.azurewebsites.net/api/azfn1'
 print(requests.get(urlbase + '?n=144').text)
 ```
 
@@ -625,7 +625,7 @@ Python 3.8.6 (tags/v3.8.6:db45529, Sep 23 2020, 15:52:53) [MSC v.1927 64 bit (AM
 Type "help", "copyright", "credits" or "license" for more information.
 
 >>> import requests
->>> urlbase='https://rob5-azure-function-test.azurewebsites.net/api/azfn1'
+>>> urlbase='https://rob5.azurewebsites.net/api/azfn1'
 >>> print(requests.get(urlbase + '?n=144').text)
 
 Results: 144 has 6 factors, is = 2 * 2 * 2 * 2 * 3 * 3 ... thanks for playing!
@@ -711,7 +711,7 @@ The Python code used to test this was given as:
 
 ```
 import requests
-urlbase='https://rob5-azure-function-test.azurewebsites.net/api/azfn1'
+urlbase='https://rob5.azurewebsites.net/api/azfn1'
 print(requests.get(urlbase + '?n=144').text)
 ```
 
