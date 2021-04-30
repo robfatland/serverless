@@ -2,31 +2,51 @@
 
 ## Links
 
-
-- [This tutorial](https://github.com/robfatland/serverless/blob/main/azure/tutorial.md)
-- [Serverless function design pattern introduction](https://www.twilio.com/docs/glossary/what-is-serverless-architecture)
+## Table of Contents
 - [Presentation slides](https://docs.google.com/presentation/d/1R2HHfHYgmarje2q_0x42hMecUc7R6SFjI-ih1L05foQ/edit#slide=id.p)
 - [Padlet for communications](https://padlet.com/robfatland/serverless)
-- The [Azure Portal](https://portal.azure.com)
+
+- [This tutorial](https://github.com/robfatland/serverless/blob/main/azure/tutorial.md)
+  * [Overview](#overview)
+  * [1: Establish access to an Azure Subscription](#1-establish-access-to-an-azure-subscription)
+  * [2: Portal work](#2-portal-work)
+  * [3: Aside on templates and code](#3-aside-on-templates-and-code)
+  * [4: Switching to Visual Studio Code (VSCode)](#4-switching-to-visual-studio-code-vscode)
+  * [5: Installing Python and Extensions](#5-installing-python-and-extensions)
+  * [6: Creating an Azure Function in VSCode](#6-creating-an-azure-function-in-vscode)
+  * [7: Code break](#7-code-break)
+  * [8: Test locally](#8-test-locally)
+  * [9: Deploy to Azure](#9-deploy-to-azure)
+  * [10: Programmatic test](#10-programmatic-test)
+  * [Appendices](#appendices)
+    + [Longer Overview of Serverless computing and Azure Serverless Functions](#longer-overview-of-serverless-computing-and-azure-serverless-functions)
+    + [Stretch Problem 1: Timing an Azure Function](#stretch-problem-1)
+    + [Stretch Problem 2: Expanding an Azure Function](#stretch-problem-2)
+    + [Stretch Problem 3: Binding an Azure Function](#stretch-problem-3)
+    + [Docker review](#docker-review)
+    + [Containers and Linux (WSL 2) on Windows](#understanding-docker-in-relation-to-wsl-2)
+    + [Stretch Problem 1 example results](#stretch-problem-1-example-results)
+
+#### Software Installation Guides
 - Installing [VSCode](https://code.visualstudio.com/)
 - Installing the [Azure Functions Core Tools Extension in VSCode](https://github.com/Azure/azure-functions-core-tools#installing)
 - Installing [.Net Core](https://dotnet.microsoft.com/download) may help with VSCode on a Mac
-- Skip to [Section 4](#4-switching-to-visual-studio-code) (this skips over the Azure Portal work)
+
+#### Reference Documentation
 - [Microsoft Azure Functions overview](https://docs.microsoft.com/en-us/azure/azure-functions/functions-overview)
 - [Microsoft Azure Functions general structure](https://docs.microsoft.com/en-us/azure/azure-functions/functions-reference)
 - [Microsoft Azure Functions specifically with Python](https://docs.microsoft.com/en-us/azure/azure-functions/functions-reference-python)
 - [What Azure Functions cost](https://azure.microsoft.com/en-us/pricing/details/functions/)
-- [An interesting blog on using Serverless Functions for deep learning](https://www.serverless.com/blog/using-tensorflow-serverless-framework-deep-learning-image-recognition)
-- [Appendices](#appendices) at the bottom of this walk-through
-- [Appendix: Containers, specifically Docker](#docker-for-the-uninitiated)
-- [Appendix: Containers and Linux (WSL 2) on Windows](#understanding-docker-in-relation-to-wsl-2)
-- [Stretch problem: Timing an Azure Function](#stretch-problem-1)
-- [Stretch problem: Expanding an Azure Function](#stretch-problem-2)
-- [Stretch problem: Binding an Azure Function](#stretch-problem-3)
-- [Code golf Sudoku solver blog by Jake VanDerplas](https://jakevdp.github.io/blog/2013/04/15/code-golf-in-python-sudoku/) 
-- [Rustem Feyzkhanov's GitHub Lambda (AWS Serverless) adaptations library](https://github.com/ryfeus/lambda-packs)
 - [YouTube video on Azure Function best practices (and more)](https://youtu.be/kvTostlJp7M)
 
+#### Further reading
+- [Serverless function design pattern introduction](https://www.twilio.com/docs/glossary/what-is-serverless-architecture)
+- [An interesting blog on using Serverless Functions for deep learning](https://www.serverless.com/blog/using-tensorflow-serverless-framework-deep-learning-image-recognition)
+- [Code golf Sudoku solver blog by Jake VanDerplas](https://jakevdp.github.io/blog/2013/04/15/code-golf-in-python-sudoku/) 
+- [Rustem Feyzkhanov's GitHub Lambda (AWS Serverless) adaptations library](https://github.com/ryfeus/lambda-packs)
+
+
+## At-a-glance 
 
 ***What are we doing? And why?***
 
