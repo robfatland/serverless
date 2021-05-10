@@ -4,7 +4,7 @@
 
 ## Table of Contents
 - [Presentation slides](https://docs.google.com/presentation/d/1R2HHfHYgmarje2q_0x42hMecUc7R6SFjI-ih1L05foQ/edit#slide=id.p)
-- [Padlet for communications](https://padlet.com/robfatland/serverless)
+- [Padlet for communications](https://padlet.com/nlalterman/serverlessfunctions)
 
 - [This tutorial](https://github.com/robfatland/serverless/blob/main/azure/tutorial.md)
   * [Overview](#overview)
