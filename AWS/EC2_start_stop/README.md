@@ -1,4 +1,17 @@
+## Overview
+
+I often leave EC2 instances running overnight that are doing nothing useful. These notes are about setting up an automatic
+*Stop* of a particular EC2 at say 7PM every night. This can ultimately save thousands of dollars in unnecessary cloud spend. 
+
+
+## Procedural notes
+
 These are notes from following the procedure [here](https://aws.amazon.com/premiumsupport/knowledge-center/start-stop-lambda-cloudwatch/).
+
+
+> Suggestion: Read these notes, then go through the procedural at the above link.
+
+
 That is a comprehensive walk-through that creates both a Start and a Stop Lambda with corresponding daily CloudWatch alarms.
 To begin with I will only do the **Stop** operation.
 
@@ -34,8 +47,10 @@ To begin with I will only do the **Stop** operation.
     * After the alarm set: Return to the Lambda function and did a refresh: Now the CloudWatch alarm appears as a trigger
         * I could have but did not do this from within the Lambda Function page
 
-This function would be much cooler if it also sent me an email that it ran. 
-Here is the code:
+To do: Use SNS to send me an email that this ran. 
+
+
+Here is the code. To do: Change the information to reside in environment variables.
 
 ```
 import boto3
