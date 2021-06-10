@@ -449,7 +449,10 @@ be this version of Python.
 ## 7 Code break
 
 The VSCode Sidebar provides us with a navigator for our Azure Function called `azfn`. Let's create some code in this folder.
-The plan for this code is to receive an integer labeled `n` and return its prime factorization as a string. This process is
+The plan for this code is to receive an integer labeled `n` and return its prime factorization as a string; or it may also
+receive a sudoku puzzle labeled `s` (and 81-character string of digits) and return a solution for that puzzle.
+ 
+This process is
 initiated by the Azure Function trigger; which we selected above to be an HTTP message. 
 
 
@@ -484,7 +487,9 @@ def sudoku_solver(p):
                 yield s
 ```
 
-Be sure to save this file. 
+Be sure to save this file. Please notice that it contains two functions: One for factoring 
+integers and one for solving sudoku puzzles. These correspond to the key values 'n' and 's'
+in the API call portion of the URL. For more, see below.
 
 
 Next: Modify the file `__init__.py` to read as follows. (Notice the leading period `.` in the import statement for the factoring code.)
@@ -492,36 +497,45 @@ Next: Modify the file `__init__.py` to read as follows. (Notice the leading peri
 ```
 import logging
 import azure.functions as func
-from .factors import factor_integer
+from .factors import factor_integer, sudoku_solver
 
 def main(req: func.HttpRequest) -> func.HttpResponse:
 
     logging.info('Python HTTP trigger function azfn1 processed a request, hurray')
     n = req.params.get('n')
-    if not n: reply_string = 'Results: No n parameter, no factors for you!!!'
-    else:                                         # runs if 'n' was found (will be of type string)
+    s = req.params.get('s')
+    if n:
         factor_list = factor_integer(int(n))      # gets a list of factors
         factor_string = ' * '.join([str(f) for f in factor_list])
         reply_string = 'Results: ' + str(n) + ' has ' + str(len(factor_list)) + ' factors, is = ' \
                        + factor_string + ' ... thanks for playing!'
+    elif s:
+        if len(s) == 81 and s.isnumeric():
+            reply_string = ''
+            for solution_string in sudoku_solver(s): reply_string += solution_string + '\n'
+        else:
+            reply_string = 'could not parse Sudoku puzzle string'
+    else: 
+        reply_string = "no parameter parsed"
 
     return func.HttpResponse(reply_string, status_code = 200)
 ```
 
-Be sure to save this file.
-
-
-Notice the original default program was modified to look for a parameter `n`. This is passed to the Function in the HTTP trigger request. 
+Be sure to save this file. The original default program was modified to look for a key value, either `n` or `s`.
+This is assumed to be followed by a value, for example `n=12` or 
+ `s=000075000010020000040003000500000302000800010000000600000100480200000000700000000`
+This key value pair is passed to the Function in the HTTP trigger request. 
+The resulting Azure function will call the factoring algorithm for `n` or the
+sudoku solver for `s`.
 
 
 In summary...
 
 
-* We added one Python code file `factor.py` that has an integer factoring function
+* We added one Python code file `factor.py` that has integer factoring and sudoku solver functions
 * We modified the main program `__init__.py` in a couple of ways
-    * Import the factor_integer() function from the first file
-    * Simplify checking for an integer to factor (the `n` parameter)
-    * If a good integer is received: Factor it and return the results as a text string
+    * Import the `factor_integer()` and `sudoku_solver()` functions from the first file
+    * Call the corresponding function based on the key, return the results
 
 
 ## 8 Test locally
