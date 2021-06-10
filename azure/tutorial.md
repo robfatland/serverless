@@ -471,6 +471,17 @@ def factor_integer(n):
     if n > 1: prime_factors.append(int(n))           # options exhausted: a residual n > 1  
                                                      #   will be the (float) last factor
     return prime_factors
+
+
+def sudoku_solver(p):
+    i = p.find('0')
+    if i < 0: yield p
+    else:
+        for v in set('123456789')-set(p[j] for j in range(81)
+                                      if (i%9==j%9) or (i//9==j//9)
+                                      or (i//27==j//27 and i%9//3==j%9//3)):
+            for s in sudoku_solver(p[:i]+v+p[i+1:]):
+                yield s
 ```
 
 Be sure to save this file. 
