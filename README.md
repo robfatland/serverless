@@ -8,6 +8,4 @@ Here is a compilation of resource links related to
 
 * [Clean green/black views for vim and bash](https://github.com/robfatland/greenandblack)
 * [Cloud machine images](https://github.com/cloudbank-project/image-research-computing-tutorial)
-* [Cloud cost notification email sender](https://github.com/robfatland/costnotify)
-* [Containerization for research (MSE544)](https://github.com)
-* [CloudBank webinar announcements](https://cloudbank-project.github.io/cbwebinar.invitation/)
+* [AWS Serverless Example: Cloud cost notifications](https://github.com/robfatland/costnotify)
