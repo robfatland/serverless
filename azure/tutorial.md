@@ -1,4 +1,4 @@
-# Azure Functions for scientists and students: A walkthrough
+# Azure Serverless Functions walkthrough
 
 ## Links
 
