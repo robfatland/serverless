@@ -247,7 +247,7 @@ The final **Review / Create** tab allows you to launch the creation process. Loo
 <BR><BR>
    
 
-If all goes well you arrive at a confirmation message.
+If all goes well we arrive at a confirmation message.
 
 <BR><BR>
    
