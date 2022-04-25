@@ -564,7 +564,7 @@ This is an example of using a browser to interact with a web service.
 
 
 Let's modify the URL by adding an integer to factor and see how this changes the results.
-In your browser address bar change the URL to `http://localhost:7071/api/azfn1?n=56` and hit enter.
+In your browser address bar change the URL to `http://localhost:7071/api/azfn1?n=837563732` and hit enter.
 This re-triggers the Azure Function (which again, to emphasize, is running locally on your
 Development Machine, not on Azure). This time with a number to factor you should get back
 the prime factorization of 56. 
