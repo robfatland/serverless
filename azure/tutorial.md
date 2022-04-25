@@ -523,7 +523,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
 
 Be sure to save this file. The original default program was modified to look for a key value, either `n` or `s`.
 This is assumed to be followed by a value, for example `n=12` or 
- `s=000075000010020000040003000500000302000800010000000600000100480200000000700000000`
+ `s=90400060000090007056004300017560420903000070840837210600109706000040831005`
 This key value pair is passed to the Function in the HTTP trigger request. 
 The resulting Azure function will call the factoring algorithm for `n` or the
 sudoku solver for `s`.
