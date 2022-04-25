@@ -173,7 +173,7 @@ The first tab of the Create wizard is **Basics**. Details we fill in:
 * **Resource Group**: Choose the drop-down default
 * Check **Code**, not Docker Container (that was the previous tutorial)
 * Choose **Python** and **3.8** 
-* Choose region **US West** as it is geographically closest (fastest connection speed) 
+* Choose region **Central US**
 
 
 Note: The Resource Group drop-down should show something like 
