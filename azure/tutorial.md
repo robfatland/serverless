@@ -170,14 +170,14 @@ From that point on the Function will exist (it even has its own URL) until we ch
 
 The first tab of the Create wizard is **Basics**. Details we fill in:
 
-* **Resource Group**: Choose the drop-down default
+* **Resource Group**: Use the drop-down to choose the one associated with your NetID
 * Check **Code**, not Docker Container (that was the previous tutorial)
 * Choose **Python** and **3.8** 
 * Choose region **Central US**
 
 
-Note: The Resource Group drop-down should show something like 
-`rg-amlclass-netid`. This is your default Resource Group, it already exists, so it is an easy choice.
+Note: The Resource Group drop-down should show
+`rg-amlclass-mynetid`. This is your default Resource Group, it already exists, so it is an easy choice.
 
 <BR><BR>
 
@@ -192,10 +192,13 @@ to go to the next tab. Don't choose **Review and Create** as this skips
 over the intervening tabs. 
 
 
-Next is the **Hosting** tab. This should resemble the one shown below. Notice that a Storage Account is created by default and associated
-with the Function App. A Storage Account is a logical container like a Resource Group but specific to data storage modes
+Next is the **Hosting** tab. This should resemble the one shown below. 
+ Notice that a Storage Account is created by default and associated
+with the Function App. A Storage Account is a logical container like 
+a Resource Group but specific to data storage modes
 on the cloud. 
 
+ 
 <BR><BR>
 
 <img src="https://github.com/robfatland/serverless/blob/main/azure/images/12_1_Function_App_Wizard_Hosting.png" alt="drawing" width="700"/>
@@ -203,10 +206,12 @@ on the cloud.
 <BR><BR>
    
 
+Next comes the Networking tab: Keep the defaults (nothing to do here).
+ 
 
 Next comes the **Monitoring** tab. This offers to turn on a service called Application Insights. This is a tag-along service
 that helps track resource usage: For understanding behavior and debugging problems. We will skip it; leave it Disabled (No).
-There may be a message saying we can't use it in any case. 
+I'm not sure it is even available; and if you want to investigate further of course that's fine: Suggest do this at a later time.
 
 <BR><BR>
    
