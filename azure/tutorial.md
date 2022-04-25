@@ -141,7 +141,7 @@ for resources that are associated with one another (in your view). We treat a Re
 <img src="https://github.com/robfatland/serverless/blob/main/azure/images/10_1_Create_a_resource.png" alt="drawing" width="200"/>
 
 
-Choose ***'Marketplace'*** rather than ***'Custom'***. The Azure Marketplace is a large collection of cloud resources 
+***'Azure Marketplace'*** is a large collection of cloud resources 
 and services; it is where we find things like Serverless Functions and Virtual Machines and so on. 
 
 
