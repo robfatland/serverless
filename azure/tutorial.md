@@ -557,7 +557,7 @@ Notice that the Activity Bar context switches from Azure to Debugging.
 Ctrl+click on the localhost link `http://localhost:7071/api/azfn1`. The term `localhost` refers to your
 own computer; so this causes your browser to go to port 7071 on your own computer. This port has been associated
 with your Azure Function; so it is triggered. The Python code runs; and because it was not provided with an integer 
-to factor it prints the error message `Results: No n parameter, no factors for you!!!`. 
+to factor it prints the message `no parameter passed`. (Find this message in the code!)
 
 
 This is an example of using a browser to interact with a web service. 
