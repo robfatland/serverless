@@ -625,24 +625,40 @@ If this works as planned we have completed coding, testing, deploying and execut
 ## 10 Programmatic test
 
 
-The last step returns to the theme of automation. Specifically let's execute the Azure Function trigger from Python 
-(rather than in a browser address bar by hand). You can do this as a short three-line Python program but since
-Python is an interpretive language we can also enter these three lines of code on the Python prompt.
+The final activity returns to the theme of automation. Let's execute the Azure Function trigger using Python 
+rather than typing text into a browser address bar by hand. We can do this as a short three-line Python program
+or by 'talking' directly to the Python interpreter. 
 
 
-Ensure that the Python `requests` library is installed in your environment. 
-The command to install is `python -m pip install requests`. 
-This simple program requests the factorization of 144. Note that the URL
-is the base URL as shown above with the parameter string appended.
+Ensure that the Python `requests` library is installed in your environment.
+If you try to `import requests` in Python and the interpreter tells you it has 
+no such library: Return to the `bash` shell and enter a
+command to install `requests`. This command is `python -m pip install requests`. 
+This simple program requests the factorization of an integer. Note that the URL
+is the *base* URL as shown above with a key-value parameter string appended
+after a question mark character `?`.
 
+
+Test via a 3-line Python program...
+ 
 
 ```
 import requests
-urlbase='https://rob5.azurewebsites.net/api/azfn1'
-print(requests.get(urlbase + '?n=144').text)
+urlbase='https://rob5azfn02.azurewebsites.net/api/HttpTrigger1'
+print(requests.get(urlbase + '?n=23948237498237').text)
 ```
 
-Again this can be entered on the Python command line, for example:
+...and this can also be entered on the Python command line as shown below. 
+ 
+To get to the Python command line from 
+the `bash` prompt: type `python`. The result: A new prompt that
+probably looks like `>>> `. Now instead of talking to the `bash shell`
+we are talking to the Python interpreter. 
+
+ 
+These commands ought to work (4/27/22). You can try them to
+verify. To test your version: Replace `rob5azfn02` with your Azure function's name; and replace
+`HttpTrigger1` with your trigger name (if it is different). 
 
 ```
 prompt> python
@@ -651,20 +667,25 @@ Python 3.8.6 (tags/v3.8.6:db45529, Sep 23 2020, 15:52:53) [MSC v.1927 64 bit (AM
 Type "help", "copyright", "credits" or "license" for more information.
 
 >>> import requests
->>> urlbase='https://rob5.azurewebsites.net/api/azfn1'
->>> print(requests.get(urlbase + '?n=144').text)
+>>> urlbase='https://rob5azfn02.azurewebsites.net/api/HttpTrigger1'
+>>> print(requests.get(urlbase + '?n=23948237498237').text)
 
-Results: 144 has 6 factors, is = 2 * 2 * 2 * 2 * 3 * 3 ... thanks for playing!
+Results: 23948237498237 has ... etcetera ... thanks for playing!
 
 >>> 
 ```
 
-This completes the construction and testing of a simple serverless computation service. The first million
-executions of this function on Azure are at no cost. The service will be stable and should "just work" for 
-the foreseeable future which on the cloud is typically about three to five years.
+This completes the activity, constructing and testing a simple serverless function on Azure. 
+The first million executions of this function incur no cost. 
+ 
+Services like this tend to be stable and "just work" for 
+the foreseeable future: On the cloud typically three to five years.
+But the technology continues to advance so it may be necessary to
+perform an update of some sort down the road.
 
 
-Real implementations will tend to be more complex. They will particularly tend to involve connecting 
+Real implementations will tend to be more complex. 
+They will tend to involve connecting 
 the serverless function with data resources. While this is 
 beyond the scope of this tutorial, a vast array of instructional resources are 
 available online. 
@@ -675,7 +696,7 @@ available online.
 
 Our goal here is to create an Azure Function, an online service that factors an integer (for example). 
 As no Virtual Machine is explicitly involved in this process the result is called a 'serverless function'.
-This suggests visualizing clouds like Azure as programmable computers.
+This suggests visualizing cloud platforms like Azure as programmable computers.
 
 
 In building research computing machinery ('infrastructure') we have options for degree of effort, cost, 
