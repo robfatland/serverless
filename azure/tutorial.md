@@ -599,11 +599,15 @@ This image shows the sequence of deployment prompts.
 <BR>
 
 While the Azure Function deploys on the Azure cloud the lower console directs your attention to the **OUTPUT** tab.  
-The URL of this new Azure Function appears here as a URL on *azurewebsites.net*. 
+The URL of this new Azure Function appears here as a URL on *azurewebsites.net*.
+ 
+The deployment will enable Application Insights by default. This is useful as it allows us to see the logging results
+in the console. See first section in the Appendix below on how to do this. 
 
 
 We can return to the Azure portal to see the Azure Function listed in the default Resource Group.
-
+ 
+ 
 <BR>
    
 <img src="https://github.com/robfatland/serverless/blob/main/azure/images/30_2_Default_Resource_Group_shows_Azure_Function.png" alt="drawing" width="800"/>
@@ -692,6 +696,21 @@ available online.
 
 ## Appendices
 
+### See logging results in the Azure console
+
+From Home view: Choose the Function App of interest
+ 
+This gives the Overview view by default: emphasis on left menu bar
+ 
+Choose Functions from this menu bar: Will list the function `HttpTrigger1` (or whatever it is named)
+ 
+Click on that Trigger; and from the new page, at left, click Monitor
+ 
+In the main panel of the portal/console there are two options: Invocations and Logs. Select Logs.
+ 
+This brings up a black-background text box. Test the Azure Function to see the diagnostics printed in this text box.
+
+ 
 ### Longer Overview of Serverless computing and Azure Serverless Functions
 
 Our goal here is to create an Azure Function, an online service that factors an integer (for example). 
