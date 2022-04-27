@@ -48,42 +48,38 @@
 
 ## At-a-glance 
 
-***What are we doing? And why?***
-
-
-* Answer: We’re building an Azure version of a serverless function using Python 3 
-* Result: Testable URL + context: Building operational research code on the cloud, lightweight version
-* **S4** mnemonic: Azure Functions are **$cheap, serverless, secure, scalable**.
-* Cost: Free for the first 400TB / one million executions. (400TB of what????)
-* Serverless structure: Trigger → Code runs → Output
-* Optimization problem: How much do we need to learn to use Azure Functions effectively?
-* Why problem: What are Azure Functions good for? 
+* We are building an Azure version of a serverless function using Python 3 
+* Result 1: Testable URL
+* Result 2: Intro to building research code on the cloud, lightweight version
+* Azure Functions are **Serverless, Secure, Scalable, $Cheap**.
+    * Free for the first 400TB / one million executions. (400TB of what????)
+* Serverless: Trigger → Code executes → Output
+* More complete: Data are involved; Output includes debugging information
+* "How much effort here?" "What sorts of tasks fit serverless?"
 
 
 ***Why Azure? Why Serverless?***
 
 
-* Azure: One of four big clouds, many well-designed, proven features
-* Azure has a great integrated environment that helps with being productive
-* Useful term: Infrastructure: the scaffolding of a computing system
-* Serverless technology automatically scales up (makes copies of itself) to meet demand
+* Azure: As one of the four big clouds has many well-designed, proven features
+* Azure integrates with the VSCode IDE (saves time)
+* 'Infrastructure' means the scaffolding of a computing system
+* Serverless automatically makes copies of itself to meet demand
 
 
 ***Facets of this topic***
 
 
-* An Azure Function has a number of moving parts: Storage account, code base, configuration files, ...
-* __init__.py is *recipe*. Don't change it unless you know how. 
-* VSCode: Can modify the view, can use the Command Pallette, can move between Command shells (Power Shell, WSL, ...)
-* Security: For example: Azure Functions have *Anonymous* users versus higher security options
-* A subject unto itself: Python environments and configuration via `requirements.txt`
+* Azure function components: Storage account, code base, configuration files, ...
+* __init__.py is the *recipe*. Don't change it unless you know how. 
+* Security: *Anonymous* users have no authentication required
+* Python environments, configuration via `requirements.txt`
 * Windows Python 3.8+ 64-bit PATH, PYTHONPATH: Can be a challenge
 * Thematic: Templates and automation versus by-hand
 * On HTTP triggers: GET and POST are distinct *types*. Example code has “body parse” component; see the Appendix
 * Where can results go? HTTP response, a new file in a Storage Account; or a line appended to an existing file; or a new entry in a database table
 * More security: Private environment variables; key vault; etc: How to get code to GitHub safely?
 * Debugging: Where does `logging.info` go?
-
 
 
 ## Overview
