@@ -322,11 +322,15 @@ to auto-generate Azure Functions, i.e. do this same task in an automated manner.
 
 
 
-We now depart from the Azure portal in favor of a local development application 
-called Visual Studio Code, abbreviated VSCode. Looking at the Azure
-cloud through the portal illustrates that cloud computing
-comes with a lot of details. However it would be nice to work in a more streamlined
-environment without the profusion of detail; and that is just what VSCode is.
+We now depart from the Azure portal. We will install and use a 
+well-regarded local development application 
+called Visual Studio Code, abbreviated VSCode. 
+The Azure portal with its many features and details illustrates the fact 
+that the cloud comes with a lot of details. VSCode is an important
+counterbalance to this complexity for two reasons. First: VSCode enables
+us to develop and test code locally, on our own laptops, before moving
+that code to the cloud. Second, VSCode does that migration to the cloud
+with just a few mouse clicks. 
 
 
 An installer may be found at [https://code.visualstudio.com/](https://code.visualstudio.com/).
@@ -336,6 +340,13 @@ Default installation adds VSCode to PATH (requires shell restart).
 
 Install if necessary and start up the Visual Studio Code (VSCode) application on 
 your Development System. 
+ 
+ 
+### Challenges in using VSCode
+
+
+A number of "uh oh something has gone wrong" items have cropped up in our experience. 
+Here we provide some solutions. 
 
 
 
