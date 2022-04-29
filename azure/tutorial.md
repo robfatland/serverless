@@ -352,8 +352,20 @@ your Development System.
 ### Challenges in using VSCode
 
 
-A number of "uh oh something has gone wrong" items have cropped up in our experience. 
-Here we provide some solutions. 
+Some "uh oh something has gone wrong" items have appeared; common in computing but
+still super frustrating. Here we provide solutions to particular issues.
+ 
+#### Python access in VSCode terminal
+ 
+Download and install Python 3.9 from [www.python.org](www.python.org)
+
+<BR><BR>   
+<img src="https://github.com/robfatland/serverless/blob/main/azure/images/PVSCTerm_01.png" alt="drawing" width="600"/>
+<BR><BR>
+<img src="https://github.com/robfatland/serverless/blob/main/azure/images/PVSCTerm_02.png" alt="drawing" width="600"/>
+<BR><BR>
+
+
 
 
 
