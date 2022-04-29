@@ -359,7 +359,7 @@ still super frustrating. Here we provide solutions to particular issues.
 #### Python access in VSCode terminal
  
  
-- Download and install Python 3.9 from [www.python.org](www.python.org)
+- Download and install Python 3.9.12 from [www.python.org](www.python.org). (Not Python 10.)
 
  
 <BR><BR>   
