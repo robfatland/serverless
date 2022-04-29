@@ -200,12 +200,13 @@ on the cloud.
 <BR><BR>
    
 
-Next comes the Networking tab: Keep the defaults (nothing to do here).
+Next comes the **Networking** tab: Keep defaults; nothing to do here.
  
 
-Next comes the **Monitoring** tab. This offers to turn on a service called Application Insights. This is a tag-along service
-that helps track resource usage: For understanding behavior and debugging problems. We will skip it; leave it Disabled (No).
-I'm not sure it is even available; and if you want to investigate further of course that's fine: Suggest do this at a later time.
+Next comes the **Monitoring** tab. This offers to enable a service called Application Insights.
+This helps track resource usage and debug problems. 
+For now leave this Disabled (select 'No'). We come back to Application Insights use later in this tutorial
+when we shift to using Visual Studio Code. 
 
 <BR><BR>
    
@@ -216,8 +217,16 @@ I'm not sure it is even available; and if you want to investigate further of cou
 
 <BR><BR>
    
-The **Tagging** tab allows us to annotate this Azure Function with key-value pairs. This helps immensely when trying 
-to remember what the Azure Function does after not thinking about it for four months. 
+The **Tagging** tab allows us to annotate an Azure Function with key-value pairs. 
+Sometimes our efforts on the cloud are interrupted -- say for four months -- and when we return we find a list 
+of engaged resources that can appear mysterious. Tagging is way to anticipate this problem.
+The idea is to invent tags that behave like Question/Answer pairs. 'Who owns this resource?, Fred does!'
+becomes the tag 'Owner' + 'Fred'. Other useful tag keys could include 'Project Title', 'Expiration Date', 
+'Ok to delete after expiration?', and 'Email contact'. Each tag *key* would have a corresponding *value*.
+In six months someone might be cleaning up this cloud subscription. If they come across a Storage Account
+on Azure and they find your tags: They might check with you before deleting your valuable data forever. 
+So tags can be extremely valuable.
+ 
 
 <BR><BR>
    
