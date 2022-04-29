@@ -175,21 +175,19 @@ The first tab of the Create wizard is **Basics**. Details we fill in:
 Note: The Resource Group drop-down should show
 `rg-amlclass-mynetid`. This is your default Resource Group, it already exists, so it is an easy choice.
 
-<BR><BR>
-
-<img src="https://github.com/robfatland/serverless/blob/main/azure/images/10_4_Function_App_Wizard_Basics_Tab.png" alt="drawing" width="700"/>
-
+(image update needed: redacted for now)
+ 
 <BR><BR>
    
 
 
 For each Wizard tab -- once it is filled in -- choose the right-most option at the bottom of the page
-to go to the next tab. Don't choose **Review and Create** as this skips
-over the intervening tabs. 
+to go to the next tab. Avoid the **Review and Create** button unless you want to skip the context of the
+intervening tabs.
 
 
-Next is the **Hosting** tab. This should resemble the one shown below. 
- Notice that a Storage Account is created by default and associated
+Next tab is **Hosting** tab (image below). 
+Notice that a Storage Account is created by default and associated
 with the Function App. A Storage Account is a logical container like 
 a Resource Group but specific to data storage modes
 on the cloud. 
