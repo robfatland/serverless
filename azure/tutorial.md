@@ -357,15 +357,19 @@ still super frustrating. Here we provide solutions to particular issues.
  
 #### Python access in VSCode terminal
  
-Download and install Python 3.9 from [www.python.org](www.python.org)
+- Download and install Python 3.9 from [www.python.org](www.python.org)
 
 <BR><BR>   
-<img src="https://github.com/robfatland/serverless/blob/main/azure/images/PVSCTerm_01.png" alt="drawing" width="600"/>
+<img src="https://github.com/robfatland/serverless/blob/main/azure/images/PVSCTerm_01.png" alt="drawing" width="400"/>
 <BR><BR>
-<img src="https://github.com/robfatland/serverless/blob/main/azure/images/PVSCTerm_02.png" alt="drawing" width="600"/>
+<img src="https://github.com/robfatland/serverless/blob/main/azure/images/PVSCTerm_02.png" alt="drawing" width="400"/>
 <BR><BR>
 
+- ***IMPORTANT: Run the installer with defaults settings, and DO NOT SELECT "Add Python to PATH"***
 
+<BR><BR>
+<img src="https://github.com/robfatland/serverless/blob/main/azure/images/PVSCTerm_03.png" alt="drawing" width="400"/>
+<BR><BR>
 
 
 
