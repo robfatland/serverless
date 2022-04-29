@@ -349,28 +349,63 @@ Install if necessary and start up the Visual Studio Code (VSCode) application on
 your Development System. 
  
  
-### Challenges in using VSCode
+### Challenges using VSCode
 
 
 Some "uh oh something has gone wrong" items have appeared; common in computing but
 still super frustrating. Here we provide solutions to particular issues.
  
+ 
 #### Python access in VSCode terminal
+ 
  
 - Download and install Python 3.9 from [www.python.org](www.python.org)
 
+ 
 <BR><BR>   
 <img src="https://github.com/robfatland/serverless/blob/main/azure/images/PVSCTerm_01.png" alt="drawing" width="400"/>
 <BR><BR>
 <img src="https://github.com/robfatland/serverless/blob/main/azure/images/PVSCTerm_02.png" alt="drawing" width="400"/>
 <BR><BR>
 
+ 
 - ***IMPORTANT: Run the installer with defaults settings, and DO NOT SELECT "Add Python to PATH"***
 
+ 
 <BR><BR>
 <img src="https://github.com/robfatland/serverless/blob/main/azure/images/PVSCTerm_03.png" alt="drawing" width="400"/>
 <BR><BR>
+ 
+ 
+- Completely close and re-open VSCode
+- Open the command palette with ctrl+shift+p
+- Run the "Python: Select interpreter" command
 
+ 
+<BR><BR>
+<img src="https://github.com/robfatland/serverless/blob/main/azure/images/PVSCTerm_04.png" alt="drawing" width="400"/>
+<BR><BR>
+
+
+- Choose Python 3.9.12
+- Ensure it is the one installed to "~\AppData\Local\..."
+ 
+ 
+<BR><BR>
+<img src="https://github.com/robfatland/serverless/blob/main/azure/images/PVSCTerm_05.png" alt="drawing" width="400"/>
+<BR><BR>
+ 
+ 
+- If you have an Azure function already: Delete it
+- Create a new Azure function from scratch per the tutorial instructions below 
+- When it comes to selecting a Python interpreter for the virtual environment choose "py -3.9"
+
+ 
+<BR><BR>
+<img src="https://github.com/robfatland/serverless/blob/main/azure/images/PVSCTerm_06.png" alt="drawing" width="400"/>
+<BR><BR>
+ 
+- Continue with the tutorial steps from here.
 
 
 ## 5 Installing Python and Extensions
