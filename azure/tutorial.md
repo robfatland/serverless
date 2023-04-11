@@ -2,24 +2,54 @@
 
 ## Links
 
-## Table of Contents
-- [Presentation slides](https://docs.google.com/presentation/d/1R2HHfHYgmarje2q_0x42hMecUc7R6SFjI-ih1L05foQ/edit#slide=id.p)
-- [Padlet for communications](https://padlet.com/robfatland/serverless)
 
+- [Slides](https://docs.google.com/presentation/d/1R2HHfHYgmarje2q_0x42hMecUc7R6SFjI-ih1L05foQ/edit#slide=id.p)
+- [Padlet for communications](https://padlet.com/robfatland/serverless)
 - [This tutorial](https://github.com/robfatland/serverless/blob/main/azure/tutorial.md)
-  * [Overview](#overview)
-  * [1: Establish access to an Azure Subscription](#1-establish-access-to-an-azure-subscription)
-  * [2: Portal work](#2-portal-work)
-  * [3: Aside on templates and code](#3-aside-on-templates-and-code)
-  * [4: Switching to Visual Studio Code (VSCode)](#4-switching-to-visual-studio-code-vscode)
-  * [5: Installing Python and Extensions](#5-installing-python-and-extensions)
-  * [6: Creating an Azure Function in VSCode](#6-creating-an-azure-function-in-vscode)
-  * [7: Code break](#7-code-break)
-  * [8: Test locally](#8-test-locally)
-  * [9: Deploy to Azure](#9-deploy-to-azure)
-  * [10: Programmatic test](#10-programmatic-test)
-  * [Appendices](#appendices)
-    + [Longer Overview of Serverless computing and Azure Serverless Functions](#longer-overview-of-serverless-computing-and-azure-serverless-functions)
+
+
+#### Software Installation Guides
+
+
+- Installing [VSCode](https://code.visualstudio.com/)
+- Installing the [Azure Functions Core Tools Extension in VSCode](https://github.com/Azure/azure-functions-core-tools#installing)
+- Installing [.Net Core](https://dotnet.microsoft.com/download) may help with VSCode on a Mac
+
+
+#### Reference Documentation
+
+
+- [Microsoft Azure Functions overview](https://docs.microsoft.com/en-us/azure/azure-functions/functions-overview)
+- [Microsoft Azure Functions general structure](https://docs.microsoft.com/en-us/azure/azure-functions/functions-reference)
+- [Microsoft Azure Functions specifically with Python](https://docs.microsoft.com/en-us/azure/azure-functions/functions-reference-python)
+- [What Azure Functions cost](https://azure.microsoft.com/en-us/pricing/details/functions/)
+- [YouTube video on Azure Function best practices (and more)](https://youtu.be/kvTostlJp7M)
+
+
+#### Further reading
+
+
+- [Serverless function design pattern introduction](https://www.twilio.com/docs/glossary/what-is-serverless-architecture)
+- [An interesting blog on using Serverless Functions for deep learning](https://www.serverless.com/blog/using-tensorflow-serverless-framework-deep-learning-image-recognition)
+- [Code golf Sudoku solver blog by Jake VanDerplas](https://jakevdp.github.io/blog/2013/04/15/code-golf-in-python-sudoku/) 
+- [Rustem Feyzkhanov's GitHub Lambda (AWS Serverless) adaptations library](https://github.com/ryfeus/lambda-packs)
+
+
+## Table of Contents
+
+* [Overview](#overview)
+* [1: Establish access to an Azure Subscription](#1-establish-access-to-an-azure-subscription)
+* [2: Portal work](#2-portal-work)
+* [3: Aside on templates and code](#3-aside-on-templates-and-code)
+* [4: Switching to Visual Studio Code (VSCode)](#4-switching-to-visual-studio-code-vscode)
+* [5: Installing Python and Extensions](#5-installing-python-and-extensions)
+* [6: Creating an Azure Function in VSCode](#6-creating-an-azure-function-in-vscode)
+* [7: Code break](#7-code-break)
+* [8: Test locally](#8-test-locally)
+* [9: Deploy to Azure](#9-deploy-to-azure)
+* [10: Programmatic test](#10-programmatic-test)
+* [Appendices](#appendices)
+    + [Longer Overview of Serverless](#longer-overview-of-serverless-computing-and-azure-serverless-functions)
     + [Stretch Problem 1: Timing an Azure Function](#stretch-problem-1)
     + [Stretch Problem 2: Expanding an Azure Function](#stretch-problem-2)
     + [Stretch Problem 3: Binding an Azure Function](#stretch-problem-3)
@@ -27,26 +57,9 @@
     + [Containers and Linux (WSL 2) on Windows](#understanding-docker-in-relation-to-wsl-2)
     + [Stretch Problem 1 example results](#stretch-problem-1-example-results)
 
-#### Software Installation Guides
-- Installing [VSCode](https://code.visualstudio.com/)
-- Installing the [Azure Functions Core Tools Extension in VSCode](https://github.com/Azure/azure-functions-core-tools#installing)
-- Installing [.Net Core](https://dotnet.microsoft.com/download) may help with VSCode on a Mac
-
-#### Reference Documentation
-- [Microsoft Azure Functions overview](https://docs.microsoft.com/en-us/azure/azure-functions/functions-overview)
-- [Microsoft Azure Functions general structure](https://docs.microsoft.com/en-us/azure/azure-functions/functions-reference)
-- [Microsoft Azure Functions specifically with Python](https://docs.microsoft.com/en-us/azure/azure-functions/functions-reference-python)
-- [What Azure Functions cost](https://azure.microsoft.com/en-us/pricing/details/functions/)
-- [YouTube video on Azure Function best practices (and more)](https://youtu.be/kvTostlJp7M)
-
-#### Further reading
-- [Serverless function design pattern introduction](https://www.twilio.com/docs/glossary/what-is-serverless-architecture)
-- [An interesting blog on using Serverless Functions for deep learning](https://www.serverless.com/blog/using-tensorflow-serverless-framework-deep-learning-image-recognition)
-- [Code golf Sudoku solver blog by Jake VanDerplas](https://jakevdp.github.io/blog/2013/04/15/code-golf-in-python-sudoku/) 
-- [Rustem Feyzkhanov's GitHub Lambda (AWS Serverless) adaptations library](https://github.com/ryfeus/lambda-packs)
 
 
-## At-a-glance 
+## Overview 
 
 * We are building an Azure version of a serverless function using Python 3 
 * Result 1: Testable URL
@@ -81,8 +94,6 @@
 * More security: Private environment variables; key vault; etc: How to get code to GitHub safely?
 * Debugging: Where does `logging.info` go?
 
-
-## Overview
 
 
 We walk through building a simple serverless utility on the Azure cloud called an *Azure Function*. 
