@@ -321,13 +321,18 @@ this Resource Group including the Serverless Function we just created.
 <BR><BR>
    
 
-This concludes the creation of an Azure Function using the Azure portal. 
-While the Azure Function is not terribly inspiring we have accomplished two things:
-We established a "Portal view" of the cloud resource creation process;
-and we have done some navigation of the Azure cloud via a web browser. 
+This concludes the creation of an Azure Function using the Azure portal.
+The last thing to do is select your Azure Function and Delete it.
+
+    
+***Accomplished***
+    
+- Experience with the browser/portal path to cloud resource creation
+- Navigated the Azure cloud
+- Introduction to ephemeral cloud thinking: Lasting for a very short time (while we experiment/learn)
 
 
-## 3 Aside on templates and code
+## 3 On templates and code
 
 
 In the portal Overview of the Azure Function at the far upper right is a hyperlink
