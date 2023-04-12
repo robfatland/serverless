@@ -303,13 +303,15 @@ Over to the right in the main panel is the URL associated with the Azure Functio
 
 <BR>
 
-Click on the URL. This should open a default page in your browser.  This is what an Azure Function does when we do not give it a 
-specific job to do (code to run). We verify here that the Function was created and works, albeit it is not too interesting at this point. 
+Copy this URL to a new browser tab. 
+This should open a default page in your browser. 
+This is what an Azure Function does when we do not give it a 
+specific job to do (code to run). We verify here that the Function was 
+created and works, albeit it is merely hello world. 
 
 
-Now let's return to the portal Azure Function view and navigate up a level to **Home** and then down into 
-the default **Resource Group**. Click the **Home** link at the upper left, 
-then click the resource group **rg-amlclass-netid**. Here we should find a listing of the resources in 
+Return to the Azure Function and navigate up a level to **Home** and then down into 
+the default **Resource Group**. Here we should find a listing of the resources in 
 this Resource Group including the Serverless Function we just created. 
 
 <BR><BR>
