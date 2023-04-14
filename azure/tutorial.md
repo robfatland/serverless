@@ -364,20 +364,19 @@ Default installation adds VSCode to PATH (requires shell restart).
 
 
 Install if necessary and start up the Visual Studio Code (VSCode) application on 
-your Development System. 
+your Development System ('laptop').
  
  
-### Challenges using VSCode
-
-
-Some "uh oh something has gone wrong" items have appeared; common in computing but
-still super frustrating. Here we provide solutions to particular issues.
+### Configuring VSCode
  
  
 #### Python access in VSCode terminal
  
- 
-- Download and install Python 3.9.12 from [www.python.org](www.python.org). (Not Python 10.)
+
+***kilroy revisit and adjust this: what is already installed? which Python, if necessary?***
+    
+    
+- Download and install Python 3.9.12 from [www.python.org](www.python.org).
 
  
 <BR><BR>   
@@ -407,6 +406,9 @@ still super frustrating. Here we provide solutions to particular issues.
 
 - Choose Python 3.9.12
 - Ensure it is the one installed to "~\AppData\Local\..."
+    
+    
+***kilroy is the above still correct? how to 'ensure'???***
  
  
 <BR><BR>
@@ -416,7 +418,7 @@ still super frustrating. Here we provide solutions to particular issues.
  
 - If you have an Azure function already: Delete it
 - Create a new Azure function from scratch per the tutorial instructions below 
-- When it comes to selecting a Python interpreter for the virtual environment choose "py -3.9"
+- When it comes to selecting a Python interpreter for the virtual environment choose "py-3.9"
 
  
 <BR><BR>
