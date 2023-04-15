@@ -1,5 +1,10 @@
 # Azure Serverless Functions walkthrough
 
+This tutorial follows a very minimalist path to a working example of serverless,
+owing to time constraints. We recommend viewing this as a first step in 
+developing a more comprehensive cloud computing skill set. 
+
+
 ## Links
 
 
@@ -613,10 +618,10 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
 
 Be sure to save this file. The original default program was modified to look for a key value, either `n` or `s`.
 This is assumed to be followed by a value, for example `n=12` or 
- `s=90400060000090007056004300017560420903000070840837210600109706000040831005`
+ `s=060000008201800500905002000000704602300090005504608000000900301007005906100000050`
 This key value pair is passed to the Function in the HTTP trigger request. 
-The resulting Azure function will call the factoring algorithm for `n` or the
-sudoku solver for `s`.
+The resulting Azure function will call the factoring algorithm for key `n` or the
+sudoku solver for key `s`.
 
 
 In summary...
