@@ -1,12 +1,15 @@
+This page is a stub.
+
+
 # Overview
 
-Serverless computing on AWS uses **AWS Lambda**. A lambda function can do a lot of different things including
 
-* Monitor your spend rate on the cloud and notify you every day by email
-* Turn an EC2 instance on and off every day to reduce the cost of operating it
-* Respond to a web request with the results of a calculation
-* Respond to a web request with data
+AWS serverless functions go by the brand name '**AWS Lambda functions**'. Uses include...
 
-Please refer to the sub-folders of this folder; as they respectively address these tasks.
 
-(kilroy) This would benefit from a transfer out of `costnotify` and from `Zero2API`.
+* ...monitor spend on the cloud; notify you how this is going via email
+* Stop and restart virtual machines automatically to reduce cost
+* Respond to a web request by doing a calculation or providing some data
+* Log data from remote devices
+
+(kilroy: costnotify and Zero2API)
