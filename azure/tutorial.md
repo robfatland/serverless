@@ -1,7 +1,7 @@
 This tutorial is deprecated; [this is the link to the current MSE544 tutorial](https://github.com/robfatland/serverless/blob/main/azure/MSE544.md)
 
 
-# Azure Serverless Functions walkthrough
+# Do Not Use This: Click on the link above
 
 
 This tutorial follows a very minimalist path to a working example of serverless,
