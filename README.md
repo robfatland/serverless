@@ -1,7 +1,7 @@
 # serverless
 
 * [This repo describes serverless function building on the Azure cloud.](https://github.com/robfatland/serverless).
-    * Particularly: [the MSE544 Walkthrough and Resources](https://github.com/robfatland/serverless/blob/main/azure/tutorial.md)
+    * Particularly: [the MSE544 Walkthrough and Resources](https://github.com/robfatland/serverless/blob/main/azure/MSE544.md)
 
 
 * Related
